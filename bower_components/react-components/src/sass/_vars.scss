@@ -1,0 +1,28 @@
+// Application Colors
+$off-white: #ECECEC;
+$lighter-grey: #989898;
+$light-grey: #676E75;
+$grey: #454E56;
+$dark-grey: #343B44;
+$darker-grey: #222A34;
+$green: #58C99E;
+$light-blue: #00B0F1;
+
+@function light-blue-rgba($opacity){
+  @return rgba(0, 176, 241, $opacity);
+}
+
+// Error Colors
+$error-red: #FBE6F2;
+$error-dark-red: #FF9494;
+$error-red-border: #D893A1;
+
+// Page Message
+$success-green: rgb(130, 209, 143);
+$success-green-bg: rgba(70, 86, 80, .9);
+$error-pink: rgb(238, 148, 127);
+$error-pink-bg: rgba(84, 72, 72, .9);
+$info-blue: rgb(157, 217, 217);
+$info-blue-bg: rgba(78, 91, 94, .9);
+$warning-yellow: rgb(238, 211, 39);
+$warning-yellow-bg: rgba(95, 85, 66, 0.90);

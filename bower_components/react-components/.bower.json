@@ -1,0 +1,15 @@
+{
+  "name": "react-components",
+  "homepage": "https://github.com/dataminr/react-components",
+  "version": "0.5.1",
+  "_release": "0.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.5.1",
+    "commit": "ea9f95a8095871681e4497763b2f954fd2938f56"
+  },
+  "_source": "git://github.com/dataminr/react-components.git",
+  "_target": "^0.5.1",
+  "_originalSource": "react-components",
+  "_direct": true
+}

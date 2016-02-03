@@ -1,0 +1,15 @@
+{
+  "name": "expanded-react-test-utils",
+  "homepage": "https://github.com/dataminr/expanded-react-test-utils",
+  "version": "0.5.1",
+  "_release": "0.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.5.1",
+    "commit": "ed00255b55373fc3ee9d1ee1f9c71b97388ae9f4"
+  },
+  "_source": "git://github.com/dataminr/expanded-react-test-utils.git",
+  "_target": "^0.5.1",
+  "_originalSource": "expanded-react-test-utils",
+  "_direct": true
+}

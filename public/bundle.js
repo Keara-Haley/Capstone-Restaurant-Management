@@ -51,7 +51,7 @@
 	var Router = __webpack_require__(159).Router;
 	var routes = __webpack_require__(210);
 
-	__webpack_require__(215);
+	__webpack_require__(212);
 
 	ReactDOM.render(React.createElement(
 	    Router,
@@ -24420,9 +24420,8 @@
 
 	var React = __webpack_require__(1);
 	var Main = __webpack_require__(211);
-	var ManagerLogin = __webpack_require__(212);
-	var StationsMenu = __webpack_require__(213);
-	var Station = __webpack_require__(214);
+	var ManagerLogin = __webpack_require__(217);
+	var Station = __webpack_require__(218);
 	var Router = __webpack_require__(159);
 	var Route = Router.Route;
 	var IndexRoute = Router.IndexRoute;
@@ -24430,11 +24429,7 @@
 	module.exports = React.createElement(
 	    Route,
 	    { path: '/', component: Main },
-	    React.createElement(
-	        Route,
-	        { path: 'StationsMenu', component: StationsMenu },
-	        React.createElement(Route, { path: 'Station/:StationType', component: Station })
-	    ),
+	    React.createElement(Route, { path: 'Station', component: Station }),
 	    React.createElement(IndexRoute, { component: ManagerLogin })
 	);
 
@@ -24452,13 +24447,13 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { id: "restaurant-app" },
+	            { className: "restaurant-app" },
 	            React.createElement(
-	                "nav",
-	                { className: "navbar navbar-default", role: "navigation" },
+	                "div",
+	                { className: "navbar" },
 	                React.createElement(
 	                    "div",
-	                    { className: "col-sm-7", style: { marginTop: 15 } },
+	                    { className: "name-logo" },
 	                    "RESTAURANT SOLUTIONS"
 	                )
 	            ),
@@ -24477,126 +24472,13 @@
 /* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var Router = __webpack_require__(159);
-
-	var ManagerLogin = React.createClass({
-	    displayName: 'ManagerLogin',
-
-	    mixins: [Router.History],
-
-	    login: function login() {
-	        this.history.pushState(null, "StationsMenu");
-	    },
-
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            { className: 'manager-login' },
-	            React.createElement(
-	                'div',
-	                { className: 'username' },
-	                React.createElement('input', { type: 'text', placeholder: 'Username' })
-	            ),
-	            React.createElement(
-	                'div',
-	                { className: 'password' },
-	                React.createElement('input', { type: 'password', placeholder: 'Password' })
-	            ),
-	            React.createElement(
-	                'button',
-	                { className: 'login-button', onClick: this.login },
-	                'Login'
-	            )
-	        );
-	    }
-	});
-
-	module.exports = ManagerLogin;
-
-/***/ },
-/* 213 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	//var Constants = require('utils/Constants');
-	var Router = __webpack_require__(159);
-
-	var StationsMenu = React.createClass({
-	    displayName: 'StationsMenu',
-
-	    mixins: [Router.History],
-
-	    openStation: function openStation(stationType) {
-	        //this.history.pushState(null, "Station/" + stationType);
-	    },
-
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            { className: 'stations-menu' },
-	            React.createElement(
-	                'button',
-	                { className: 'host-station', onClick: this.openStation("host") },
-	                'Host Station'
-	            ),
-	            React.createElement(
-	                'button',
-	                { className: 'server-station', onClick: this.openStation("server") },
-	                'Server Station'
-	            ),
-	            React.createElement(
-	                'button',
-	                { className: 'kitchen-station', onClick: this.openStation("kitchen") },
-	                'Kitchen Station'
-	            )
-	        );
-	    }
-	});
-
-	module.exports = StationsMenu;
-
-/***/ },
-/* 214 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var Station = React.createClass({
-	    displayName: "Station",
-
-	    render: function render() {
-	        return React.createElement(
-	            "div",
-	            { className: "station" },
-	            React.createElement(
-	                "span",
-	                null,
-	                "Station"
-	            )
-	        );
-	    }
-	});
-
-	module.exports = Station;
-
-/***/ },
-/* 215 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(216);
+	var content = __webpack_require__(213);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(218)(content, {});
+	var update = __webpack_require__(216)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -24613,21 +24495,21 @@
 	}
 
 /***/ },
-/* 216 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(217)();
+	exports = module.exports = __webpack_require__(214)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".manager-login {\n  max-width: 150px;\n  margin-right: 0px; }\n  .manager-login .username .password {\n    position: relative; }\n    .manager-login .username .password input {\n      width: 150px; }\n\n.navbar {\n  background-color: #6699cc; }\n", ""]);
+	exports.push([module.id, ".manager-login {\n  max-width: 150px;\n  margin-right: 0px; }\n  .manager-login .username .password {\n    position: relative; }\n    .manager-login .username .password input {\n      width: 150px; }\n\n.restaurant-app {\n  background-color: #959595; }\n  .restaurant-app .container {\n    float: left;\n    width: 99%;\n    margin-left: .5%;\n    margin-right: .5%; }\n  .restaurant-app .navbar {\n    border-radius: 5px;\n    background-color: #0086b3; }\n    .restaurant-app .navbar .name-logo {\n      margin-top: 4px;\n      margin-left: 10px;\n      font-family: \"Times-New-Roman\";\n      font-size: 30px; }\n    .restaurant-app .navbar .logout {\n      float: right;\n      display: inline-block; }\n\n.tables-container {\n  border-radius: 5px;\n  float: left;\n  width: 69%;\n  background-color: #0086b3;\n  margin-right: 1%;\n  height: 650px; }\n  .tables-container .reservation-buttons {\n    margin: 5px; }\n    .tables-container .reservation-buttons .take-reservation-button, .tables-container .reservation-buttons .remove-reservation-button, .tables-container .reservation-buttons .seat-reservation-button {\n      margin: 5px 0px 5px 50px;\n      display: inline-block; }\n      .tables-container .reservation-buttons .take-reservation-button button, .tables-container .reservation-buttons .remove-reservation-button button, .tables-container .reservation-buttons .seat-reservation-button button {\n        font-family: \"Times-New-Roman\";\n        font-size: 16px;\n        border-radius: 5px;\n        background-color: #454E56;\n        color: black;\n        border: 10px;\n        width: 200px;\n        height: 50px; }\n  .tables-container .tables {\n    background-color: #0086b3;\n    margin: 5px;\n    height: 510px; }\n  .tables-container .waitlist-buttons {\n    margin: 5px; }\n    .tables-container .waitlist-buttons .add-waitlist-button, .tables-container .waitlist-buttons .remove-waitlist-button, .tables-container .waitlist-buttons .seat-waitlist-button {\n      margin: 5px 0px 5px 50px;\n      display: inline-block; }\n      .tables-container .waitlist-buttons .add-waitlist-button button, .tables-container .waitlist-buttons .remove-waitlist-button button, .tables-container .waitlist-buttons .seat-waitlist-button button {\n        font-family: \"Times-New-Roman\";\n        font-size: 16px;\n        border-radius: 5px;\n        background-color: #454E56;\n        color: black;\n        border: 10px;\n        width: 200px;\n        height: 50px; }\n\n.lists-container {\n  border-radius: 5px;\n  float: left;\n  width: 29%;\n  background-color: #0086b3;\n  margin-left: 1%;\n  margin-bottom: 15px; }\n  .lists-container .reservation-list {\n    border-radius: 5px;\n    height: 315px;\n    background-color: #676E75;\n    margin: 5px; }\n    .lists-container .reservation-list h1 {\n      border-radius: 5px;\n      background-color: #454E56;\n      margin: 0;\n      font-family: \"Times-New-Roman\";\n      font-size: 25px;\n      text-align: center; }\n    .lists-container .reservation-list .reservation-entry {\n      font-family: \"Times-New-Roman\";\n      width: 96.5%;\n      margin: 5px;\n      background-color: #959595;\n      text-indent: 5px; }\n  .lists-container .waitlist-list {\n    border-radius: 5px;\n    height: 315px;\n    background-color: #676E75;\n    margin: 5px; }\n    .lists-container .waitlist-list h1 {\n      border-radius: 5px;\n      background-color: #454E56;\n      margin: 0;\n      font-family: \"Times-New-Roman\";\n      font-size: 25px;\n      text-align: center; }\n    .lists-container .waitlist-list .waitlist-entry {\n      font-family: \"Times-New-Roman\";\n      width: 96.5%;\n      margin: 5px;\n      background-color: #959595;\n      text-indent: 5px; }\n\nhtml {\n  font-family: \"Times-New-Roman\";\n  font-size: 100px;\n  background-color: #676E75; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 217 */
+/* 214 */
 /***/ function(module, exports) {
 
 	/*
@@ -24683,7 +24565,8 @@
 
 
 /***/ },
-/* 218 */
+/* 215 */,
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -24935,6 +24818,418 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Router = __webpack_require__(159);
+
+	var ManagerLogin = React.createClass({
+	    displayName: 'ManagerLogin',
+
+	    mixins: [Router.History],
+
+	    login: function login() {
+	        this.history.pushState(null, "Station");
+	    },
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'manager-login' },
+	            React.createElement(
+	                'div',
+	                { className: 'username' },
+	                React.createElement('input', { type: 'text', placeholder: 'Username' })
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'password' },
+	                React.createElement('input', { type: 'password', placeholder: 'Password' })
+	            ),
+	            React.createElement(
+	                'button',
+	                { className: 'login-button', onClick: this.login },
+	                'Login'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = ManagerLogin;
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var TablesContainer = __webpack_require__(219);
+	var ListsContainer = __webpack_require__(222);
+
+	var Station = React.createClass({
+	    displayName: 'Station',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'station' },
+	            React.createElement(TablesContainer, null),
+	            React.createElement(ListsContainer, null)
+	        );
+	    }
+	});
+
+	module.exports = Station;
+
+/***/ },
+/* 219 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var WaitlistButtonsContainer = __webpack_require__(220);
+	var ReservationButtonsContainer = __webpack_require__(221);
+	var Tables = __webpack_require__(229);
+
+	var TablesContainer = React.createClass({
+	    displayName: 'TablesContainer',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'tables-container' },
+	            React.createElement(ReservationButtonsContainer, null),
+	            React.createElement(Tables, null),
+	            React.createElement(WaitlistButtonsContainer, null)
+	        );
+	    }
+	});
+
+	module.exports = TablesContainer;
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var WaitlistButton = __webpack_require__(227);
+
+	var WaitlistButtonsContainer = React.createClass({
+	    displayName: 'WaitlistButtonsContainer',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'waitlist-buttons' },
+	            React.createElement(WaitlistButton, { buttonType: 'add' }),
+	            React.createElement(WaitlistButton, { buttonType: 'remove' }),
+	            React.createElement(WaitlistButton, { buttonType: 'seat' })
+	        );
+	    }
+	});
+
+	module.exports = WaitlistButtonsContainer;
+
+/***/ },
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReservationButton = __webpack_require__(228);
+
+	var ReservationButtonsContainer = React.createClass({
+	    displayName: 'ReservationButtonsContainer',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'reservation-buttons' },
+	            React.createElement(ReservationButton, { key: 'take', buttonType: 'take' }),
+	            React.createElement(ReservationButton, { key: 'remove', buttonType: 'remove' }),
+	            React.createElement(ReservationButton, { key: 'seat', buttonType: 'seat' })
+	        );
+	    }
+	});
+
+	module.exports = ReservationButtonsContainer;
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReservationsList = __webpack_require__(224);
+	var WaitlistsList = __webpack_require__(225);
+
+	var ListContainer = React.createClass({
+	    displayName: 'ListContainer',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'lists-container' },
+	            React.createElement(ReservationsList, null),
+	            React.createElement(WaitlistsList, null)
+	        );
+	    }
+	});
+
+	module.exports = ListContainer;
+
+/***/ },
+/* 223 */,
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReservationEntry = __webpack_require__(230);
+
+	var ReservationsList = React.createClass({
+	    displayName: 'ReservationsList',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'reservation-list' },
+	            React.createElement(
+	                'h1',
+	                { className: 'reservations-header' },
+	                'RESERVATIONS'
+	            ),
+	            React.createElement(ReservationEntry, { entry: { name: 'John Smith', numInParty: 4 } })
+	        );
+	    }
+	});
+
+	module.exports = ReservationsList;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var WaitlistEntry = __webpack_require__(231);
+
+	var WaitlistsList = React.createClass({
+	    displayName: 'WaitlistsList',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'waitlist-list' },
+	            React.createElement(
+	                'h1',
+	                { className: 'waitlist-header' },
+	                'WAITLISTS'
+	            ),
+	            React.createElement(WaitlistEntry, { entry: { name: 'Bob Johnson', numInParty: 2 } })
+	        );
+	    }
+	});
+
+	module.exports = WaitlistsList;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Table = React.createClass({
+	    displayName: 'Table',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            'Table'
+	        );
+	    }
+	});
+
+	module.exports = Table;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var WaitlistButton = React.createClass({
+	    displayName: 'WaitlistButton',
+
+	    PropTypes: {
+	        buttonType: React.PropTypes.string.isRequired
+	    },
+
+	    render: function render() {
+	        var classes, buttonText;
+	        switch (this.props.buttonType) {
+	            case 'add':
+	                classes = 'add-waitlist-button';
+	                buttonText = 'ADD WAITLIST';
+	                break;
+	            case 'remove':
+	                classes = 'remove-waitlist-button';
+	                buttonText = 'REMOVE WAITLIST';
+	                break;
+	            case 'seat':
+	                classes = 'seat-waitlist-button';
+	                buttonText = 'SEAT WAITLIST';
+	                break;
+	        }
+	        return React.createElement(
+	            'div',
+	            { className: classes },
+	            React.createElement(
+	                'button',
+	                null,
+	                buttonText
+	            )
+	        );
+	    }
+	});
+
+	module.exports = WaitlistButton;
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var ReservationButton = React.createClass({
+	    displayName: 'ReservationButton',
+
+	    propTypes: {
+	        buttonType: React.PropTypes.string.isRequired
+	    },
+
+	    render: function render() {
+	        var classes, buttonText;
+	        switch (this.props.buttonType) {
+	            case 'take':
+	                classes = 'take-reservation-button';
+	                buttonText = 'TAKE RESERVATION';
+	                break;
+	            case 'remove':
+	                classes = 'remove-reservation-button';
+	                buttonText = 'REMOVE RESERVATION';
+	                break;
+	            case 'seat':
+	                classes = 'seat-reservation-button';
+	                buttonText = 'SEAT RESERVATION';
+	                break;
+	        }
+	        return React.createElement(
+	            'div',
+	            { className: classes },
+	            React.createElement(
+	                'button',
+	                null,
+	                buttonText
+	            )
+	        );
+	    }
+	});
+
+	module.exports = ReservationButton;
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Table = __webpack_require__(226);
+
+	var Tables = React.createClass({
+	    displayName: 'Tables',
+
+	    render: function render() {
+	        return React.createElement('div', { className: 'tables' });
+	    }
+	});
+
+	module.exports = Tables;
+
+/***/ },
+/* 230 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var ReservationEntry = React.createClass({
+	    displayName: "ReservationEntry",
+
+	    PropTypes: {
+	        entry: React.PropTypes.object.isRequired
+	    },
+
+	    render: function render() {
+	        var reservationText = this.props.entry.name + ": " + this.props.entry.numInParty;
+	        return React.createElement(
+	            "div",
+	            { className: "reservation-entry" },
+	            reservationText
+	        );
+	    }
+	});
+
+	module.exports = ReservationEntry;
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var WaitlistEntry = React.createClass({
+	    displayName: "WaitlistEntry",
+
+	    PropTypes: {
+	        entry: React.PropTypes.object.isRequired
+	    },
+
+	    render: function render() {
+	        var waitlistText = this.props.entry.name + ": " + this.props.entry.numInParty;
+	        return React.createElement(
+	            "div",
+	            { className: "waitlist-entry" },
+	            waitlistText
+	        );
+	    }
+	});
+
+	module.exports = WaitlistEntry;
 
 /***/ }
 /******/ ]);

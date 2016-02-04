@@ -3,12 +3,12 @@ var React = require('react');
 var Main = React.createClass({
     render: function() {
         return (
-            <div id="restaurant-app">
-                <nav className="navbar navbar-default" role="navigation">
-                    <div className="col-sm-7" style={{marginTop: 15}}>
+            <div className="restaurant-app">
+                <div className="navbar">
+                    <div className="name-logo">
                         RESTAURANT SOLUTIONS
                     </div>
-                </nav>
+                </div>
                 <div className="container">
                     {this.props.children}
                 </div>

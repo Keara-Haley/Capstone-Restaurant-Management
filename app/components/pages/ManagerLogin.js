@@ -5,7 +5,7 @@ var ManagerLogin = React.createClass({
     mixins: [Router.History],
 
     login: function() {
-        this.history.pushState(null, "StationsMenu");
+        this.history.pushState(null, "Station");
     },
 
     render: function() {

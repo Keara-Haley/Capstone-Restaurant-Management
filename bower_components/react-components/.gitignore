@@ -1,0 +1,10 @@
+**/node_modules
+.jshintrc
+.idea
+.sass-cache/
+.grunt/
+_SpecRunner.html
+**/.module-cache
+**/coverage
+.DS_Store
+dist

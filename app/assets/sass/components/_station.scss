@@ -1,0 +1,102 @@
+@import '../vars';
+
+.tables-container {
+  border-radius: 5px;
+  float: left;
+  width: 69%;
+  background-color: #0086b3;
+  margin-right: 1%;
+  height: 650px;
+  .reservation-buttons {
+    margin: 5px;
+    .take-reservation-button, .remove-reservation-button, .seat-reservation-button {
+      margin: 5px 0px 5px 50px;
+      display: inline-block;
+      button {
+        font-family: $font-regular;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #454E56;
+        color: black;
+        border: 10px;
+        width: 200px;
+        height: 50px;
+      }
+    }
+  }
+  .tables {
+    background-color: #0086b3;
+    margin: 5px;
+    height: 510px;
+    .table {
+
+    }
+  }
+  .waitlist-buttons {
+    margin: 5px;
+    .add-waitlist-button, .remove-waitlist-button, .seat-waitlist-button {
+      margin: 5px 0px 5px 50px;
+      display: inline-block;
+      button {
+        font-family: $font-regular;
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #454E56;
+        color: black;
+        border: 10px;
+        width: 200px;
+        height: 50px;
+      }
+    }
+  }
+}
+.lists-container {
+  border-radius: 5px;
+  float: left;
+  width: 29%;
+  background-color: #0086b3;
+  margin-left: 1%;
+  margin-bottom: 15px;
+  .reservation-list {
+    h1 {
+      border-radius: 5px;
+      background-color: #454E56;
+      margin: 0;
+      font-family: $font-regular;
+      font-size: 25px;
+      text-align: center;
+    }
+    border-radius: 5px;
+    height: 315px;
+    background-color: #676E75;
+    margin: 5px;
+    .reservation-entry {
+      font-family: $font-regular;
+      width: 96.5%;
+      margin: 5px;
+      background-color: #959595;
+      text-indent: 5px;
+    }
+  }
+  .waitlist-list {
+    h1 {
+      border-radius: 5px;
+      background-color: #454E56;
+      margin: 0;
+      font-family: $font-regular;
+      font-size: 25px;
+      text-align: center;
+    }
+    border-radius: 5px;
+    height: 315px;
+    background-color: #676E75;
+    margin: 5px;
+    .waitlist-entry {
+      font-family: $font-regular;
+      width: 96.5%;
+      margin: 5px;
+      background-color: #959595;
+      text-indent: 5px;
+    }
+  }
+}

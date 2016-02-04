@@ -1,0 +1,295 @@
+@import 'vars';
+
+.table-component {
+  .advanced-filter-item {
+    display: inline-block;
+    margin: 3px 5px;
+
+    span {
+      margin: 0 5px;
+    }
+
+    input {
+      margin: 0 3px;
+    }
+  }
+
+  // wrapper for the markup inside the table component
+  .data-container{
+    min-height: 100px;
+  }
+
+  // no results found to populate table text
+  .no-results {
+    color: $lighter-grey;
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  // error fetching data
+  tr.error-row {
+    color: $error-dark-red;
+    font-weight: bold;
+  }
+
+  table {
+    border-bottom: solid 1px $dark-grey;
+    border-collapse: separate;
+    font-size: 12pt;
+    margin-top: 7px;
+    table-layout: fixed;
+    width: 100%;
+
+    th {
+      border-bottom: solid 1px $light-blue;
+      cursor: default;
+      padding-bottom: 7px;
+    }
+
+    th, td {
+      border-right: solid 1px $grey;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 0 10px;
+      white-space: nowrap;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    th {
+      max-width: 100%;
+      padding-right: 0;
+
+      span {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &.indicator {
+        span {
+          max-width: calc(100% - 35px);
+        }
+
+        i {
+          position: relative;
+          right: -5px;
+
+        }
+
+        .asc {
+          top: -9px;
+        }
+
+        .desc {
+          top: -2px;
+        }
+
+        .sort-inactive {
+          top: -5px;
+        }
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    td .content {
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+  }
+
+  /*****************************
+  /* Row Backgrounds/Borders  *
+  /****************************/
+  tr:nth-child(odd) td {
+    background-color: $dark-grey;
+    border-top: solid 5px $dark-grey;
+    border-bottom: solid 5px $dark-grey;
+  }
+
+  tr:nth-child(even) td {
+    border-top: solid 5px $darker-grey;
+    border-bottom: solid 5px $darker-grey;
+  }
+
+  tr.hover-enabled:hover {
+    background-color: $grey;
+    cursor: pointer;
+
+    td {
+      background-color: $grey;
+      border-color: $grey;
+    }
+  }
+
+  /*****************************
+  /*       Filter Input        *
+  /****************************/
+  .quick-filter {
+    background-color: $grey;
+    border: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: white;
+    float: left;
+    font-size: 12pt;
+    height: 28px;
+    margin-bottom: 30px;
+    padding-left: 5px;
+  }
+
+  /*****************************
+  /*        Pagination         *
+  /****************************/
+  .pagination-controls {
+    display: inline-block;
+    float: right;
+
+    .left-control, .right-control {
+      color: $light-blue;
+      cursor: pointer;
+      padding: 3px 5px;
+
+      &:hover{
+        color: $off-white;
+      }
+    }
+
+    .left-control {
+      margin-left: 5px;
+    }
+
+    .disabled {
+      color: $grey;
+      cursor: default;
+
+      &:hover{
+        color: $grey;
+      }
+    }
+  }
+
+  /*****************************
+  /*      Column Sorting       *
+  /****************************/
+  th.indicator {
+    // inactive color for the sorting indicator
+    .sorting-indicator {
+      color: $grey;
+    }
+
+    // active color for the sorting indicator
+    .active {
+      color: $light-blue;
+    }
+
+    // highlight TH text excluding the indicator
+    &:hover {
+      color: $light-blue;
+      cursor: pointer;
+    }
+
+    // align ascending indicator with TH text
+    .asc {
+      &:before {
+        position: relative;
+        top: 4px;
+      }
+    }
+
+    // align descending indicator with TH text
+    .desc {
+      &:before {
+        position: relative;
+        bottom: 3px;
+      }
+    }
+  }
+
+  /*****************************
+  /*      Action column        *
+  /****************************/
+  // remove the TH borders for action columns as they have no TH text that require them
+  th.select-column-th {
+    border-right: none;
+  }
+
+  // center action icons (35px width in table definition works well with this)
+  td.select-column-td {
+    text-align: center;
+
+    i.on {
+      padding-left: 1px;
+    }
+  }
+
+  /*****************************
+  /*   TD dataType = status    *
+  /****************************/
+  // the span wrapping the value displayed in the TD
+  .before-icon {
+    box-sizing: border-box;
+    padding-right: 15px;
+  }
+
+  // the icon positioned after the text in the TD
+  .after-icon {
+    position: relative;
+    right: 10px;
+    top: -3px;
+    width: 35px;
+
+    &.status-on {
+      color: $green;
+    }
+
+    &.status-off {
+      color: rgba(88, 201, 158, 0.50);
+    }
+  }
+
+  /*****************************
+  /*   Grouped Actions Table   *
+  /****************************/
+  tr.sub-action {
+    color: grey;
+    display: none;
+  }
+
+  .wrap-inner {
+    display: none;
+  }
+
+  .expanded-row-indicator {
+    display: inline-block;
+    min-width: 60px;
+    padding: 0;
+    width: 60px;
+
+    i {
+      font-size: 12px;
+      margin-left: 5px;
+      position: relative;
+      top: -1px;
+    }
+
+    &.inactive {
+      color: $light-blue;
+    }
+  }
+
+  .nested-text {
+    margin-left: 75px;
+  }
+}

@@ -6,7 +6,7 @@ var Main = React.createClass({
             <div className="restaurant-app">
                 <div className="navbar">
                     <div className="name-logo">
-                        RESTAURANT SOLUTIONS
+                        <span className="logo">RESTAURANT SOLUTIONS</span>
                     </div>
                 </div>
                 <div className="container">

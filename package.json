@@ -18,8 +18,8 @@
   "homepage": "https://github.com/Keara-Haley/Capstone-Restaurant-Management",
   "dependencies": {
     "history": "^1.13.1",
-    "react": "^0.14.3",
-    "react-router": "^1.0.1"
+    "react": "^0.13.3",
+    "react-router": "0.13.3"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",

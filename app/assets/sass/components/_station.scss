@@ -16,19 +16,23 @@
         font-family: $font-regular;
         font-size: 16px;
         border-radius: 5px;
-        background-color: #454E56;
+        background-color: #757575;
         color: black;
         border: 10px;
         width: 200px;
         height: 50px;
         box-shadow: 3px 3px 3px #000000;
+        &:hover{
+          background-color: #686868;
+        }
       }
     }
   }
   .tables {
-    background-color: #0086b3;
-    margin: 5px;
+    background-color: #b8b8b8;
     height: 510px;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
     .table {
 
     }
@@ -42,11 +46,15 @@
         font-family: $font-regular;
         font-size: 16px;
         border-radius: 5px;
-        background-color: #454E56;
+        background-color: #757575;
         color: black;
         border: 10px;
         width: 200px;
         height: 50px;
+        box-shadow: 3px 3px 3px #000000;
+        &:hover{
+          background-color: #686868;
+        }
       }
     }
   }
@@ -55,49 +63,59 @@
   border-radius: 5px;
   float: left;
   width: 29%;
-  background-color: #0086b3;
+  background-color: #404040;
   margin-left: 1%;
   margin-bottom: 15px;
   .reservation-list {
     h1 {
-      border-radius: 5px;
-      background-color: #454E56;
+      background-color: #757575;
       margin: 0;
       font-family: $font-regular;
       font-size: 25px;
       text-align: center;
+      border-bottom: solid 2px #000000;
     }
-    border-radius: 5px;
     height: 315px;
-    background-color: #676E75;
+    background-color: #b8b8b8;
     margin: 5px;
     .reservation-entry {
       font-family: $font-regular;
       width: 96.5%;
       margin: 5px;
-      background-color: #959595;
+      background-color: #757575;
       text-indent: 5px;
+      box-shadow: 1px 1px 1px #000000;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover{
+        background-color: #686868;
+      }
     }
   }
   .waitlist-list {
     h1 {
-      border-radius: 5px;
-      background-color: #454E56;
+      background-color: #757575;
       margin: 0;
       font-family: $font-regular;
       font-size: 25px;
       text-align: center;
+      border-bottom: solid 2px #000000;
     }
-    border-radius: 5px;
     height: 315px;
-    background-color: #676E75;
+    background-color: #b8b8b8;
     margin: 5px;
     .waitlist-entry {
       font-family: $font-regular;
       width: 96.5%;
       margin: 5px;
-      background-color: #959595;
+      background-color: #757575;
       text-indent: 5px;
+      box-shadow: 1px 1px 1px #000000;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover{
+        background-color: #686868;
+      }
     }
   }
 }

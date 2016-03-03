@@ -1,17 +1,19 @@
-var React = require('react');
-var ReservationButton = require('./../buttons/ReservationButton');
+define(function() {
+    'use strict';
+    var React = require('react');
+    var ReservationButton = require('./../buttons/ReservationButton');
 
-var ReservationButtonsContainer = React.createClass({
+    var ReservationButtonsContainer = React.createClass({
 
-    render: function() {
-        return (
-            <div className="reservation-buttons">
-                <ReservationButton key="take" buttonType="take"/>
-                <ReservationButton key="remove" buttonType="remove"/>
-                <ReservationButton key="seat" buttonType="seat"/>
-            </div>
-        );
-    }
+        render: function () {
+            return (
+                <div className="reservation-buttons">
+                    <ReservationButton key="take" buttonType="take"/>
+                    <ReservationButton key="remove" buttonType="remove"/>
+                    <ReservationButton key="seat" buttonType="seat"/>
+                </div>
+            );
+        }
+    });
+    return ReservationButtonsContainer;
 });
-
-module.exports = ReservationButtonsContainer;

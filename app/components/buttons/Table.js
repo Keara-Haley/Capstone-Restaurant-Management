@@ -1,13 +1,15 @@
-var React = require('react');
+define(function() {
+    'use strict';
+    var React = require('react');
 
-var Table = React.createClass({
-    render: function() {
-        return (
-            <div>
-                Table
-            </div>
-        );
-    }
+    var Table = React.createClass({
+        render: function () {
+            return (
+                <div>
+                    Table
+                </div>
+            );
+        }
+    });
+    return Table;
 });
-
-module.exports = Table;

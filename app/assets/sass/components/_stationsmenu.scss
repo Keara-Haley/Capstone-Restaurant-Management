@@ -1,0 +1,81 @@
+@import '../vars';
+
+.stations-menu {
+  display: flex;
+  .buttons-container {
+    border-radius: 5px;
+    margin: 18px 0 0 18px;
+    width: 235px;
+    height: 609px;
+    background-color: #404040;
+    .station-button {
+      margin: 30px 30px 0 30px;
+      &.host {
+        margin-top: 12px;
+      }
+      button {
+        font-family: $font-regular;
+        font-size: 34px;
+        border-radius: 5px;
+        background-color: #757575;
+        color: black;
+        border: 10px;
+        width: 175px;
+        height: 175px;
+        box-shadow: 3px 3px 3px #000000;
+        &:hover {
+          background-color: #686868;
+        }
+      }
+    }
+  }
+
+  .manager-info {
+    margin: 19px 0 0 0;
+    display: flex;
+    width: 80%;
+    height: 609px;
+    .info-1-container {
+      border-radius: 5px;
+      background-color: #404040;
+      width: 50%;
+      margin-left: 30px;
+      .info-1 {
+        margin-left: 2%;
+        margin-top: 7px;
+        width: 96%;
+        height: 595px;
+        background-color: #b8b8b8;
+        h1 {
+          background-color: #757575;
+          margin: 0;
+          font-family: $font-regular;
+          font-size: 25px;
+          text-align: center;
+          border-bottom: solid 2px #000000;
+        }
+      }
+    }
+    .info-2-container {
+      border-radius: 5px;
+      background-color: #404040;
+      width: 50%;
+      margin-left: 30px;
+      .info-2 {
+        margin-left: 2%;
+        margin-top: 7px;
+        width: 96%;
+        height: 595px;
+        background-color: #b8b8b8;
+        h1 {
+          background-color: #757575;
+          margin: 0;
+          font-family: $font-regular;
+          font-size: 25px;
+          text-align: center;
+          border-bottom: solid 2px #000000;
+        }
+      }
+    }
+  }
+}

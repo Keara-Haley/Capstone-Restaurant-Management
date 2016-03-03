@@ -1,26 +1,27 @@
-var React = require('react');
-var Router = require('react-router');
+define(function() {
+    var React = require('react');
+    var Router = require('react-router');
 
-var ManagerLogin = React.createClass({
-    mixins: [Router.History],
+    var ManagerLogin = React.createClass({
+        mixins: [Router.Navigation],
 
-    login: function() {
-        this.history.pushState(null, "Station");
-    },
+        login: function () {
+            this.transitionTo('stationMenu');
+        },
 
-    render: function() {
-        return (
-            <div className="manager-login">
-                <div className="username">
-                    <input type="text" placeholder="Username"/>
+        render: function () {
+            return (
+                <div className="manager-login">
+                    <div className="username">
+                        <input type="text" placeholder="Username"/>
+                    </div>
+                    <div className="password">
+                        <input type="password" placeholder="Password"/>
+                    </div>
+                    <button className="login-button" onClick={this.login}>Login</button>
                 </div>
-                <div className="password">
-                    <input type="password" placeholder="Password"/>
-                </div>
-                <button className="login-button" onClick={this.login}>Login</button>
-            </div>
-        );
-    }
+            );
+        }
+    });
+    return ManagerLogin;
 });
-
-module.exports = ManagerLogin;

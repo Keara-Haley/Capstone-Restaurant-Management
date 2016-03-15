@@ -7,7 +7,6 @@ define(function() {
         render: function() {
             return(
                 <div className="table-sat" >
-                    <span>8 Top in Section 3</span>
                 </div>
             );
         }

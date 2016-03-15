@@ -8,7 +8,9 @@ define(function() {
     var TablesSatList = React.createClass({
         render: function() {
             return (
-                <TableSat />
+                <div className="tables-sat-list">
+                    <TableSat />
+                </div>
             );
         }
     });

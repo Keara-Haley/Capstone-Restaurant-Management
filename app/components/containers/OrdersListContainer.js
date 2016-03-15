@@ -7,7 +7,9 @@ define(function() {
     var OrdersListContainer = React.createClass({
         render: function() {
             return (
-                <OrdersList />
+                <div className="orders-list-container">
+                    <OrdersList />
+                </div>
             );
         }
     });

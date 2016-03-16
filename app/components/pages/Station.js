@@ -20,9 +20,11 @@ define(function() {
         getStationMarkup: function() {
             var serverStation = (
                 <div className="server-station">
-                    <MenuContainer />
-                    <CheckContainer />
                     <Tables />
+                    <div className="menu-check">
+                        <MenuContainer />
+                        <CheckContainer />
+                    </div>
                 </div>
             );
 

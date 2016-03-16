@@ -9,7 +9,7 @@ define(function() {
     var MenuContainer = React.createClass({
         render: function() {
             return (
-                <div>
+                <div className="menu-container">
                     <MenuButtonsContainer />
                     <MenuList />
                 </div>

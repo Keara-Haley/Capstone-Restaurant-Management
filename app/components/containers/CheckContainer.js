@@ -9,7 +9,7 @@ define(function() {
     var CheckContainer = React.createClass({
         render:function() {
             return (
-                <div>
+                <div className="check-container">
                     <CheckButtonsContainer />
                     <CheckList />
                 </div>

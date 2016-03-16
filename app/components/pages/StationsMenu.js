@@ -13,9 +13,29 @@ define(function() {
         render: function () {
             return (
                 <div className="stations-menu">
-                    <button className="host-station" onClick={() => this.openStation("host")}>Host Station</button>
-                    <button className="server-station" onClick={() => this.openStation("server")}>Server Station</button>
-                    <button className="kitchen-station" onClick={() => this.openStation("kitchen")}>Kitchen Station</button>
+                    <div className="buttons-container">
+                        <div className="station-button host">
+                            <button onClick={() => this.openStation("host")}>Host Station</button>
+                        </div>
+                        <div className="station-button server">
+                            <button onClick={() => this.openStation("server")}>Server Station</button>
+                        </div>
+                        <div className="station-button kitchen">
+                            <button onClick={() => this.openStation("kitchen")}>Kitchen Station</button>
+                        </div>
+                    </div>
+                    <div className="manager-info">
+                        <div className="info-1-container">
+                            <div className="info-1">
+                                <h1 className="info-1-header">Information Section 1</h1>
+                            </div>
+                        </div>
+                        <div className="info-2-container">
+                            <div className="info-2">
+                                <h1 className="info-2-header">Information Section 2</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             );
         }

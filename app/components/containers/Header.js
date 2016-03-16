@@ -11,11 +11,18 @@ define(function() {
             this.transitionTo('stationMenu');
         },
 
+        logout: function() {
+            this.transitionTo('home');
+        },
+
         render: function () {
             return (
                 <div className="navbar">
                     <div className="name-logo">
                         <span className="logo" onClick={this.goHome}>RESTAURANT SOLUTIONS</span>
+                    </div>
+                    <div className="logout">
+                        <button onClick={this.logout}>LOGOUT</button>
                     </div>
                 </div>
             );

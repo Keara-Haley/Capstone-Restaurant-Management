@@ -4,6 +4,9 @@ define(function() {
     var ListsContainer = require('./../containers/ListsContainer');
     var OrdersListContainer = require('./../containers/OrdersListContainer');
     var TablesSatContainer = require('./../containers/TablesSatContainer');
+    var MenuContainer = require('./../containers/MenuContainer');
+    var CheckContainer = require('./../containers/CheckContainer');
+    var Tables = require('./../containers/Tables');
 
     var Station = React.createClass({
 
@@ -16,13 +19,17 @@ define(function() {
 
         getStationMarkup: function() {
             var serverStation = (
-                <div className="host-station">
-
+                <div className="server-station">
+                    <Tables />
+                    <div className="menu-check">
+                        <MenuContainer />
+                        <CheckContainer />
+                    </div>
                 </div>
             );
 
             var hostStation = (
-                <div className="server-station">
+                <div className="host-station">
                     <TablesContainer />
                     <ListsContainer />
                 </div>

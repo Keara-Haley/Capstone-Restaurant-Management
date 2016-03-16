@@ -7,7 +7,9 @@ define(function() {
     var TablesSatContainer = React.createClass({
         render:function() {
             return (
-                <TablesSatList />
+                <div className="tables-sat-container">
+                    <TablesSatList />
+                </div>
             );
         }
     });

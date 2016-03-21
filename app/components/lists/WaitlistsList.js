@@ -43,33 +43,33 @@ define(function() {
             }
         },
 
-        getReservationMarkup: function(reservation) {
-            if(!reservation.display){
+        getWaitlistMarkup: function(waitlist) {
+            if(!waitlist.display){
                 return null;
             }
-            var classname = "reservation ";
-            if(reservation.selected) {
+            var classname = "waitlist ";
+            if(waitlist.selected) {
                 classname = classname + "selected";
             }
             return(
-                <ReservationEntry key={reservation.reservationId} classname={classname} entry={reservation} onClick={this.selectReservation}/>
+                <WaitlistEntry key={waitlist.waitlistId} classname={classname} entry={waitlist} onClick={this.selectWaitlist}/>
             );
         },
 
-        getReservationsMarkup: function() {
-            var reservations = [];
+        getWaitlistsMarkup: function() {
+            var waitlists = [];
             var self = this;
-            _.forEach(this.state.reservations, function(reservation) {
-                reservations.push(self.getReservationMarkup(reservation));
+            _.forEach(this.state.waitlists, function(waitlist) {
+                waitlists.push(self.getWaitlistMarkup(waitlist));
             });
-            return reservations;
+            return waitlists;
         },
 
         render: function () {
             return (
                 <div className="waitlist-list">
                     <h1 className="waitlist-header">WAITLISTS</h1>
-                    <WaitlistEntry entry={{name: 'Bob Johnson', numInParty: 2}}/>
+                    {this.getWaitlistsMarkup}
                 </div>
             );
         }

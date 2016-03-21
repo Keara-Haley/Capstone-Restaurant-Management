@@ -4,13 +4,15 @@ define(function() {
 
     var WaitlistEntry = React.createClass({
         PropTypes: {
-            entry: React.PropTypes.object.isRequired
+            entry: React.PropTypes.object.isRequired,
+            onClick: React.PropTypes.func.isRequired,
+            classname: React.PropTypes.string.isRequired
         },
 
         render: function () {
             var waitlistText = this.props.entry.name + ": " + this.props.entry.numInParty;
             return (
-                <div className="waitlist-entry">{waitlistText}</div>
+                <div className={this.props.classname} onClick={this.props.onClick.bind(null, this.props.entry.waitlistId)}>{waitlistText}</div>
             );
         }
     });

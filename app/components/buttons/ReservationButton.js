@@ -2,6 +2,7 @@ define(function() {
     'use strict';
     var React = require('react');
     var TablesStore = require('./../stores/TablesStore');
+    var ReservationsStore = require('./../stores/ReservationsStore');
     var _ = require('lodash');
 
     var ReservationButton = React.createClass({
@@ -25,17 +26,32 @@ define(function() {
                         lastSatOrder: 2
                     }
                 ],
-                tables: null
+                tables: null,
+                reservations: null
             };
         },
 
         componentWillMount: function() {
-            this.state.tables = TablesStore.get();
+            this.setState({
+                tables: TablesStore.get(),
+                reservations: ReservationsStore.get()
+            });
+            //this.state.tables = TablesStore.get();
             TablesStore.addChangeListener(this.updateTables);
+            //this.state.reservations = ReservationsStore.get();
+            ReservationsStore.addChangeListener(this.updateReservations);
         },
 
         updateTables: function() {
-            this.state.tables = TablesStore.get();
+            this.setState({
+                tables: TablesStore.get()
+            });
+        },
+
+        updateReservations: function() {
+            this.setState({
+                reservations: ReservationsStore.get()
+            });
         },
 
         takeReservation: function() {
@@ -47,13 +63,37 @@ define(function() {
         },
 
         seatReservation: function() {
-            var alreadySelectedTable = _.find(this.state.tables, ['selected', true]);
-            if(!alreadySelectedTable) {
-                alert("Please select a table");
+            var selectedTable = _.find(this.state.tables, ['selected', true]);
+            var selectedReservation = _.find(this.state.reservations, ['selected', true])
+            if(!selectedTable || !selectedReservation) {
+                alert("Please select a table and reservation");
             }
             else {
-                // connect reservation to table
-                console.log(alreadySelectedTable.tableId);
+                if(selectedReservation.numberInParty > selectedTable.capacity) {
+                    var seat = confirm("The number in the selected party is \ngreater than the selected table capacity.\nContinue?");
+
+                    if (seat) {
+                        // connect reservation to table
+                        selectedReservation.tableId = selectedTable.tableId;
+                        selectedReservation.selected = false;
+                        selectedReservation.display = false;
+                        selectedTable.party = selectedReservation;
+                        selectedTable.selected = false;
+                        selectedTable.occupied = true;
+                        TablesStore.setTableData(selectedTable.tableId, selectedTable);
+                        ReservationsStore.setReservationData(selectedReservation.reservationId, selectedReservation);
+                    }
+                }
+                else {
+                    selectedReservation.tableId = selectedTable.tableId;
+                    selectedReservation.selected = false;
+                    selectedReservation.display = false;
+                    selectedTable.party = selectedReservation;
+                    selectedTable.selected = false;
+                    selectedTable.occupied = true;
+                    TablesStore.setTableData(selectedTable.tableId, selectedTable);
+                    ReservationsStore.setReservationData(selectedReservation.reservationId, selectedReservation);
+                }
             }
         },
 

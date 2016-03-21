@@ -1,18 +1,18 @@
 var AppDispatcher = require('./../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
-var tableDataDefinition = require('./../../utils/definitions/tableDataDefinitions');
+var WaitlistDataDefinition = require('./../../utils/definitions/waitlistDataDefinitions');
 var _ = require('lodash');
 
-var TablesStore = assign({}, EventEmitter.prototype, {
-    tableData: tableDataDefinition.tableData,
+var WaitlistsStore = assign({}, EventEmitter.prototype, {
+    waitlistData: WaitlistDataDefinition.waitlistData,
 
     get: function() {
-        return this.tableData;
+        return this.waitlistData;
     },
 
-    setTableData: function(tableId, data) {
-        this.tableData[tableId] = data;
+    setWaitlistData: function(waitlistId, data) {
+        this.waitlistData[waitlistId] = data;
         this.emitChange();
     },
 
@@ -29,4 +29,4 @@ var TablesStore = assign({}, EventEmitter.prototype, {
     }
 });
 
-module.exports = TablesStore;
+module.exports = WaitlistsStore;

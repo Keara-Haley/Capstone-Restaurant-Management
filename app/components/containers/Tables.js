@@ -12,20 +12,6 @@ define(function() {
 
         getInitialState: function() {
             return {
-                sections: [
-                    {
-                        sectionId: 1,
-                        lastSatOrder: 1
-                    },
-                    {
-                        sectionId: 2,
-                        lastSatOrder: 3
-                    },
-                    {
-                        sectionId: 3,
-                        lastSatOrder: 2
-                    }
-                ],
                 tables: null
             };
         },
@@ -34,7 +20,10 @@ define(function() {
             //_.forEach(tables, function(table) {
             //    TablesStore.setTableData(table.tableId, table);
             //});
-            this.state.tables = TablesStore.get();
+            this.setState({
+                tables: TablesStore.get()
+            });
+            //this.state.tables = TablesStore.get();
             TablesStore.addChangeListener(this.updateTables);
         },
 

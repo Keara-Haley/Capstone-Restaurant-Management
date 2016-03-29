@@ -69,7 +69,7 @@ define(function() {
             return (
                 <div className="waitlist-list">
                     <h1 className="waitlist-header">WAITLISTS</h1>
-                    {this.getWaitlistsMarkup}
+                    {this.getWaitlistsMarkup()}
                 </div>
             );
         }

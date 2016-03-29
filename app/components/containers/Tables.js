@@ -42,6 +42,7 @@ define(function() {
         getTableMarkup: function(table) {
             var style = {left: table.x, top: table.y};
             var classname = 'table ';
+            var clickFunction = this.selectTable.bind(this, table.tableId);
 
             switch(table.capacity) {
                 case 2:
@@ -56,6 +57,7 @@ define(function() {
             }
             if(table.occupied) {
                 classname = classname + 'occupied ';
+                clickFunction = this.selectOccupiedTable.bind(this, table);
             }
             if(table.rotate) {
                 classname = classname + 'rotate ';
@@ -65,7 +67,7 @@ define(function() {
             }
 
             return(
-                <div key={table.tableId} className={classname} onClick={this.selectTable.bind(this, table.tableId)} style={style}/>
+                <div key={table.tableId} className={classname} onClick={clickFunction} style={style}/>
             );
         },
 
@@ -95,6 +97,10 @@ define(function() {
                 selectedTable.selected = true;
                 TablesStore.setTableData(tableId, selectedTable);
             }
+        },
+
+        selectOccupiedTable: function(table) {
+            //TODO add in tiny modal to show who is seated there
         },
 
         render: function () {

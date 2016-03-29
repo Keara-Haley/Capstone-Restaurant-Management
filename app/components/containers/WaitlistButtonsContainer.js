@@ -8,9 +8,9 @@ define(function() {
         render: function () {
             return (
                 <div className="waitlist-buttons">
-                    <WaitlistButton buttonType="add"/>
-                    <WaitlistButton buttonType="remove"/>
-                    <WaitlistButton buttonType="seat"/>
+                    <WaitlistButton key="add" buttonType="add"/>
+                    <WaitlistButton key="remove" buttonType="remove"/>
+                    <WaitlistButton key="seat" buttonType="seat"/>
                 </div>
             );
         }

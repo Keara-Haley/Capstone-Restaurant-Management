@@ -12,20 +12,6 @@ define(function() {
 
         getInitialState: function() {
             return {
-                sections: [
-                    {
-                        sectionId: 1,
-                        lastSatOrder: 1
-                    },
-                    {
-                        sectionId: 2,
-                        lastSatOrder: 3
-                    },
-                    {
-                        sectionId: 3,
-                        lastSatOrder: 2
-                    }
-                ],
                 tables: null,
                 reservations: null
             };
@@ -59,12 +45,21 @@ define(function() {
         },
 
         removeReservation: function() {
-
+            var selectedReservation = _.find(this.state.reservations, ['selected', true]);
+            if(!selectedReservation) {
+                alert("Please select a reservation");
+            }
+            else {
+                var remove = confirm("Are you sure you want to delete this reservation?");
+                if(remove) {
+                    ReservationsStore.deleteReservation(selectedReservation.reservationId);
+                }
+            }
         },
 
         seatReservation: function() {
             var selectedTable = _.find(this.state.tables, ['selected', true]);
-            var selectedReservation = _.find(this.state.reservations, ['selected', true])
+            var selectedReservation = _.find(this.state.reservations, ['selected', true]);
             if(!selectedTable || !selectedReservation) {
                 alert("Please select a table and reservation");
             }

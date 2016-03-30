@@ -195,7 +195,7 @@
       height: 317px;
       background-color: $background-medium;
       margin: 5px;
-      .waitlist-entry {
+      .waitlist {
         font-family: $font-regular;
         width: 96.5%;
         margin: 5px;
@@ -204,6 +204,9 @@
         box-shadow: 2px 2px 2px black;
         border-radius: 5px;
         cursor: pointer;
+        &.selected {
+          box-shadow: none;
+        }
         &:hover {
           background-color: $button-hover;
         }

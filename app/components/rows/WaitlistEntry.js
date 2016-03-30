@@ -10,7 +10,7 @@ define(function() {
         },
 
         render: function () {
-            var waitlistText = this.props.entry.name + ": " + this.props.entry.numInParty;
+            var waitlistText = this.props.entry.name + ": " + this.props.entry.numberInParty;
             return (
                 <div className={this.props.classname} onClick={this.props.onClick.bind(null, this.props.entry.waitlistId)}>{waitlistText}</div>
             );

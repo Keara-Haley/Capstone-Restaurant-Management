@@ -1,4 +1,4 @@
-module.exports = {
+    module.exports = {
     reservationsData: {
         1: {
             reservationId: 1,

@@ -3,6 +3,7 @@ define(function() {
     var React = require('react');
     var TablesStore = require('./../stores/TablesStore');
     var ReservationsStore = require('./../stores/ReservationsStore');
+    var Modal = require('react-modal-component');
     var _ = require('lodash');
 
     var ReservationButton = React.createClass({
@@ -22,9 +23,7 @@ define(function() {
                 tables: TablesStore.get(),
                 reservations: ReservationsStore.get()
             });
-            //this.state.tables = TablesStore.get();
             TablesStore.addChangeListener(this.updateTables);
-            //this.state.reservations = ReservationsStore.get();
             ReservationsStore.addChangeListener(this.updateReservations);
         },
 
@@ -42,6 +41,7 @@ define(function() {
 
         takeReservation: function() {
             // TODO put in modal
+
         },
 
         removeReservation: function() {
@@ -113,6 +113,7 @@ define(function() {
                     clickFunction = this.seatReservation;
                     break;
             }
+
             return (
                 <div className={classes}>
                     <button onClick={clickFunction}>{buttonText}</button>

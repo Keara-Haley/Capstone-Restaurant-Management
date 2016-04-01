@@ -238,12 +238,13 @@
       .order-columns {
         display: flex;
         .order-column-1 {
+          overflow: scroll;
           width: 50%;
-          height: 612px;
+          height: 607px;
           border-right: solid 3px $dark-grey;
           .order {
             width: calc(100% - 10px);
-            height: 125px;
+            height: auto;
             background-color: $background-light;
             margin: 5px 5px 0 5px;
             display: flex;
@@ -265,6 +266,7 @@
               background-color: $background-dark;
               border: 2px solid $dark-grey;
               span {
+                font-weight: bold;
                 display: block;
                 margin: 3px;
               }
@@ -289,12 +291,13 @@
           }
         }
         .order-column-2 {
+          overflow: scroll;
           width: 50%;
-          height: 612px;
+          height: 607px;
           border-left: solid 3px $dark-grey;
           .order {
             width: calc(100% - 10px);
-            height: 100px;
+            height: auto;
             background-color: $background-light;
             margin: 5px 5px 0 5px;
             display: flex;
@@ -316,6 +319,7 @@
               background-color: $background-dark;
               border: 2px solid $dark-grey;
               span {
+                font-weight: bold;
                 display: block;
                 margin: 3px;
               }

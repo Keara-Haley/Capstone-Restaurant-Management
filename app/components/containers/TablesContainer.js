@@ -6,13 +6,23 @@ define(function() {
     var Tables = require('./Tables');
 
     var TablesContainer = React.createClass({
+        propTypes: {
+            includeButtons: React.PropTypes.bool.isRequired
+        },
 
         render: function () {
+            var reservationButtons, waitlistButtons;
+
+            if(this.props.includeButtons) {
+                reservationButtons = <ReservationButtonsContainer />;
+                waitlistButtons = <WaitlistButtonsContainer />;
+            }
+
             return (
                 <div className="tables-container">
-                    <ReservationButtonsContainer />
+                    {reservationButtons}
                     <Tables />
-                    <WaitlistButtonsContainer />
+                    {waitlistButtons}
                 </div>
             );
         }

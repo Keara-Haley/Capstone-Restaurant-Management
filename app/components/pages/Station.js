@@ -20,7 +20,7 @@ define(function() {
         getStationMarkup: function() {
             var serverStation = (
                 <div className="server-station">
-                    <Tables />
+                    <TablesContainer includeButtons={false}/>
                     <div className="menu-check">
                         <MenuContainer />
                         <CheckContainer />
@@ -30,7 +30,7 @@ define(function() {
 
             var hostStation = (
                 <div className="host-station">
-                    <TablesContainer />
+                    <TablesContainer includeButtons={true}/>
                     <ListsContainer />
                 </div>
             );

@@ -4,9 +4,19 @@ define(function() {
     var React = require('react');
 
     var MenuDrinksButton = React.createClass({
-        render:function() {
+        getInitialState: function() {
+            return {
+                selectedButton
+            }
+        },
+        
+        selectButton: function() {
+            
+        },
+        
+        render: function() {
             return (
-                <button>Drinks</button>
+                <div className="menu-drinks-button" onClick={}>DRINKS</div>
             );
         }
     });

@@ -1,5 +1,13 @@
 module.exports = {
     menuItems: {
+        foodCategories: [
+            "appetizers",
+            "burgers",
+            "famous pub grub",
+            "soups and salads",
+            "sandwiches",
+            "pizza"
+        ],
         food: {
             1: {
                 itemID: 1,
@@ -127,7 +135,7 @@ module.exports = {
                 price: 12.95,
                 description: "beer battered cod, fries, coleslaw, house remoulade",
                 glutenFree: false,
-                category: "famousPubGrub"
+                category: "famous pub grub"
             },
             17: {
                 itemID: 17,
@@ -135,7 +143,7 @@ module.exports = {
                 price: 10.95,
                 description: "local ground beef, corn, green beans, carrots, celery, onion, cheddar mashed potatoes",
                 glutenFree: true,
-                category: "famousPubGrub"
+                category: "famous pub grub"
             },
             18: {
                 itemID: 18,
@@ -143,7 +151,7 @@ module.exports = {
                 price: 12.95,
                 description: "buttermilk fried chicken served hot or chilled, potato salad, coleslaw",
                 glutenFree: false,
-                category: "famousPubGrub"
+                category: "famous pub grub"
             },
             19: {
                 itemID: 19,
@@ -151,7 +159,7 @@ module.exports = {
                 price: 10.95,
                 description: "beer battered cod, coleslaw, cheddar, chili oil, remoulade, char bread, choice of side substitue blackened chicken",
                 glutenFree: false,
-                category: "famousPubGrub"
+                category: "famous pub grub"
             },
             20: {
                 itemID: 20,
@@ -159,7 +167,7 @@ module.exports = {
                 price: 4,
                 description: "daily soup special",
                 glutenFree: false,
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             21: {
                 itemID: 21,
@@ -167,7 +175,7 @@ module.exports = {
                 price: 6,
                 description: "daily soup special",
                 glutenFree: false,
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             22: {
                 itemID: 22,
@@ -175,7 +183,7 @@ module.exports = {
                 price: 6.5,
                 description: "french onion soup",
                 glutenFree: false,
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             23: {
                 itemID: 23,
@@ -198,7 +206,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             24: {
                 itemID: 24,
@@ -221,7 +229,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             25: {
                 itemID: 25,
@@ -244,7 +252,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             26: {
                 itemID: 26,
@@ -267,7 +275,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             27: {
                 itemID: 27,
@@ -290,7 +298,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             28: {
                 itemID: 28,
@@ -313,7 +321,7 @@ module.exports = {
                     "Shredded Pork",
                     "Calamari"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             29: {
                 itemID: 29,
@@ -332,7 +340,7 @@ module.exports = {
                     "House",
                     "Caesar"
                 ],
-                category: "soupsAndSalad"
+                category: "soups and salads"
             },
             30: {
                 itemID: 30,
@@ -445,24 +453,30 @@ module.exports = {
                 category: "pizza"
             }
         },
+        drinksCategories: [
+            "non-alcoholic",
+            "beer",
+            "wine",
+            "cocktails"
+        ],
         drinks: {
             43: {
                 itemID: 43,
                 name: "Pepsi",
                 price: 2.25,
-                category: "nonAlcoholic"
+                category: "non-alcoholic"
             },
             44: {
                 itemID: 44,
                 name: "Mountain Dew",
                 price: 2.25,
-                category: "nonAlcoholic"
+                category: "non-alcoholic"
             },
             45: {
                 itemID: 45,
                 name: "7Up",
                 price: 2.25,
-                category: "nonAlcoholic"
+                category: "non-alcoholic"
             },
             46: {
                 itemID: 46,
@@ -474,91 +488,91 @@ module.exports = {
                     "peanut butter",
                     "strawberry"
                 ],
-                category: "nonAlcoholic"
+                category: "non-alcoholic"
             },
             47: {
                 itemID: 47,
                 name: "Salmon Fly",
                 price: 4.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             48: {
                 itemID: 48,
                 name: "Hopzone",
                 price: 4.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             49: {
                 itemID: 49,
                 name: "Bozone Amber",
                 price: 4.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             50: {
                 itemID: 50,
                 name: "Coors Lite",
                 price: 3.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             51: {
                 itemID: 51,
                 name: "Angry Orchard",
                 price: 4.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             52: {
                 itemID: 52,
                 name: "Olympia",
                 price: 3.25,
-                category: "alcoholic-beer"
+                category: "beer"
             },
             53: {
                 itemID: 53,
                 name: "House Red",
                 price: 4,
-                category: "alcoholic-wine"
+                category: "wine"
             },
             54: {
                 itemID: 54,
                 name: "House White",
                 price: 4,
-                category: "alcoholic-wine"
+                category: "wine"
             },
             55: {
                 itemID: 55,
                 name: "Moscow Mule",
                 price: 8,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             },
             56: {
                 itemID: 56,
                 name: "Whiskey Coke",
                 price: 7,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             },
             57: {
                 itemID: 57,
                 name: "7&7",
                 price: 7,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             },
             58: {
                 itemID: 58,
                 name: "Whiskey Sour",
                 price: 8,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             },
             59: {
                 itemID: 59,
                 name: "Vodka Soda",
                 price: 7,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             },
             60: {
                 itemID: 60,
                 name: "Gin and Tonic",
                 price: 7,
-                category: "alcoholic-cocktail"
+                category: "cocktails"
             }
         }
     }

@@ -3,6 +3,7 @@ define(function() {
     var React = require('react');
     var ReservationEntry = require('./../rows/ReservationEntry');
     var ReservationsStore = require('./../stores/ReservationsStore');
+    var _ = require('lodash');
 
     var ReservationsList = React.createClass({
         getInitialState: function() {
@@ -44,6 +45,7 @@ define(function() {
         },
 
         getReservationMarkup: function(reservation) {
+            console.log(reservation);
             if(!reservation.display){
                 return null;
             }

@@ -1,7 +1,7 @@
     module.exports = {
     reservationsData: {
-        1: {
-            reservationId: 1,
+        11: {
+            reservationId: 11,
             name: "John Smith",
             dateTime: 1455901200,
             numberInParty: 4,
@@ -12,8 +12,8 @@
             tableId: null,
             display: true
         },
-        2: {
-            reservationId: 2,
+        12: {
+            reservationId: 12,
             name: "Jane Doe",
             dateTime: 1455903000,
             numberInParty: 2,
@@ -24,8 +24,8 @@
             tableId: null,
             display: true
         },
-        3: {
-            reservationId: 3,
+        13: {
+            reservationId: 13,
             name: "Barry White",
             dateTime: 1455906600,
             numberInParty: 3,
@@ -36,8 +36,8 @@
             tableId: null,
             display: true
         },
-        4: {
-            reservationId: 4,
+        14: {
+            reservationId: 14,
             name: "James Dean",
             dateTime: 1455904800,
             numberInParty: 6,
@@ -48,8 +48,8 @@
             tableId: null,
             display: true
         },
-        5: {
-            reservationId: 5,
+        15: {
+            reservationId: 15,
             name: "Ann Brown",
             dateTime: 1455913800,
             numberInParty: 1,

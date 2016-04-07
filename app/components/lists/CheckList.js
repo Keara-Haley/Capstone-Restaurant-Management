@@ -8,7 +8,7 @@ define(function() {
     var CheckList = React.createClass({
         render: function() {
             return (
-                <CheckItem />
+                <div/>
             );
         }
     });

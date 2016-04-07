@@ -43,6 +43,7 @@ define(function() {
             var style = {left: table.x, top: table.y};
             var classname = 'table ';
             var clickFunction = this.selectTable.bind(this, table.tableId);
+            var title;
 
             switch(table.capacity) {
                 case 2:
@@ -58,6 +59,7 @@ define(function() {
             if(table.occupied) {
                 classname = classname + 'occupied ';
                 clickFunction = this.selectOccupiedTable.bind(this, table);
+                title = table.party.name + " " + table.party.numberInParty;
             }
             if(table.rotate) {
                 classname = classname + 'rotate ';
@@ -67,7 +69,7 @@ define(function() {
             }
 
             return(
-                <div key={table.tableId} className={classname} onClick={clickFunction} style={style}/>
+                <div key={table.tableId} title={title} className={classname} onClick={clickFunction} style={style}/>
             );
         },
 

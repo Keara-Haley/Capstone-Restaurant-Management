@@ -18,6 +18,10 @@ module.exports = {
                 loaders: ["style", "css", "sass"]
             },
             {
+                test: /\.json$/,
+                loaders: ["json"]
+            },
+            {
                 test: /\.otf$/,
                 loader: 'url'
             },

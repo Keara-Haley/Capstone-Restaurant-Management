@@ -1,20 +1,15 @@
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
-var tableDataDefinition = require('./../../utils/definitions/tableDataDefinitions');
+var OrderDataDefinition = require('./../../utils/definitions/OrderDataDefinitions');
 var _ = require('lodash');
 
-var TablesStore = assign({}, EventEmitter.prototype, {
-    tableData: tableDataDefinition.tableData,
-
+var OrdersStore = assign({}, EventEmitter.prototype, {
+    orderData: OrderDataDefinition.orderData,
+    
     get: function() {
-        return this.tableData;
+        return this.orderData;    
     },
-
-    setTableData: function(tableId, data) {
-        this.tableData[tableId] = data;
-        this.emitChange();
-    },
-
+    
     emitChange: function() {
         this.emit('change');
     },
@@ -28,4 +23,4 @@ var TablesStore = assign({}, EventEmitter.prototype, {
     }
 });
 
-module.exports = TablesStore;
+module.exports = OrdersStore;

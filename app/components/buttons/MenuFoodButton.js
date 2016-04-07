@@ -6,9 +6,11 @@ define(function() {
     var MenuFoodButton = React.createClass({
         render:function() {
             return (
-                <button>Food</button>
+                <div className="menu-food-button selected">FOOD</div>
             );
         }
+
+    //<button>Food</button>
     });
 
     return MenuFoodButton;

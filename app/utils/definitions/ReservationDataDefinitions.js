@@ -2,7 +2,7 @@
     reservationsData: {
         11: {
             reservationId: 11,
-            name: "John Smith",
+            name: "Daley Huddleston",
             dateTime: 1455901200,
             numberInParty: 4,
             phoneNumber: "(111)111-1111",
@@ -14,7 +14,7 @@
         },
         12: {
             reservationId: 12,
-            name: "Jane Doe",
+            name: "Willard Carlsen",
             dateTime: 1455903000,
             numberInParty: 2,
             phoneNumber: "(123)456-7891",
@@ -38,7 +38,7 @@
         },
         14: {
             reservationId: 14,
-            name: "James Dean",
+            name: "Jasper Dennel",
             dateTime: 1455904800,
             numberInParty: 6,
             phoneNumber: "(999)999-9999",

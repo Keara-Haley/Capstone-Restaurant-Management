@@ -17,7 +17,6 @@ var WaitlistsStore = assign({}, EventEmitter.prototype, {
 
     deleteWaitlist: function(waitlistId) {
         _.unset(this.waitlistData, waitlistId);
-        console.log(this.waitlistData);
         this.emitChange();
     },
 

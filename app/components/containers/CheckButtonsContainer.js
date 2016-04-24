@@ -4,44 +4,32 @@ define(function() {
     var React = require('react');
 
     var CheckButtonsContainer = React.createClass({
-        getInitialState: function() {
-            return {
-                selectedButton: 'check'
-            };
+        propTypes: {
+            selectedButton: React.PropTypes.string.isRequired,
+            selectCheckButton: React.PropTypes.func.isRequired,
+            selectCheckPaymentButton: React.PropTypes.func.isRequired
         },
 
         getCheckButton: function() {
             var classname = "check-button check";
-            if(this.state.selectedButton === 'check') {
+            if(this.props.selectedButton === 'check') {
                 classname += " selected";
             }
 
             return(
-                <div className={classname} onClick={this.selectCheckButton}>CHECK</div>
+                <div className={classname} onClick={this.props.selectCheckButton}>CHECK</div>
             );
-        },
-
-        selectCheckButton: function() {
-            this.setState({
-                selectedButton: 'check'
-            });
         },
 
         getCheckPaymentButton: function() {
             var classname = "check-button payment";
-            if(this.state.selectedButton === 'payment') {
+            if(this.props.selectedButton === 'payment') {
                 classname += " selected";
             }
 
             return (
-                <div className={classname} onClick={this.selectCheckPaymentButton}>PAYMENT</div>
+                <div className={classname} onClick={this.props.selectCheckPaymentButton}>PAYMENT</div>
             );
-        },
-
-        selectCheckPaymentButton: function() {
-            this.setState({
-                selectedButton: 'payment'
-            });
         },
 
         render:function() {

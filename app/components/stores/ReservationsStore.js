@@ -25,7 +25,6 @@ var ReservationsStore = assign({}, EventEmitter.prototype, {
     
     deleteReservation: function(reservationId) {
         _.unset(this.reservationData, reservationId);
-        console.log(this.reservationData);
         this.emitChange();
     },
 

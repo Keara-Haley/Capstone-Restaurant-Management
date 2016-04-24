@@ -8,6 +8,7 @@ define(function() {
         render: function () {
             return (
                 <div className="waitlist-buttons">
+                    <div className="modal">MODAL</div>
                     <WaitlistButton key="add" buttonType="add"/>
                     <WaitlistButton key="remove" buttonType="remove"/>
                     <WaitlistButton key="seat" buttonType="seat"/>

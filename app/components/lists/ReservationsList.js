@@ -45,7 +45,6 @@ define(function() {
         },
 
         getReservationMarkup: function(reservation) {
-            console.log(reservation);
             if(!reservation.display){
                 return null;
             }

@@ -8,7 +8,7 @@
     width: 70%;
     background-color: $background-medium;
     margin-right: 1%;
-    margin-top: 65px;
+    margin-top: 70px;
     height: 510px;
     .tables {
       border-radius: 5px;
@@ -81,7 +81,6 @@
           height: 35px;
           font-family: $font-regular;
           font-size: 25px;
-          box-shadow: 0 1px 1px black;
           cursor: pointer;
           &.drinks {
             border-right: 1px solid $dark-grey;
@@ -90,8 +89,90 @@
             border-left: 1px solid $dark-grey;
           }
           &.selected {
-            box-shadow: none;
+            background-color: $button-hover;
             cursor: auto;
+          }
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+      .menu-list {
+        height: 258px;
+        //overflow: scroll;
+        .category-tabs {
+          display: flex;
+          .tab {
+            background-color: $button-header-background;
+            border-bottom: 2px solid $dark-grey;
+            text-align: center ;
+            height: 20px;
+            font-family: $font-regular;
+            cursor: pointer;
+            border-left: 1px solid $dark-grey;
+            &.drink {
+              width: calc(100% / 4);
+              font-size: 14px;
+            }
+            &.food {
+              width: calc(100% / 6);
+              font-size: 13px;
+            }
+            &.selected {
+              background-color: $button-hover;
+              cursor: auto;
+            }
+            &:hover {
+              background-color: $button-hover;
+            }
+            &.non-alc {
+              border-left: none;
+            }
+          }
+        }
+        .menu-items {
+          height: 228px;
+          overflow: scroll;
+          .menu-item {
+            width: 98%;
+            margin-top: 5px;
+            margin-left: 1%;
+            margin-bottom: 5px;
+            //border-radius: 5px;
+            border: 2px solid $dark-grey;
+            background-color: $background-dark;
+            span {
+              font-family: $font-regular;
+              font-size: 16px;
+              margin-left: 5px;
+            }
+            &.no-margin {
+              margin-bottom: 0;
+            }
+            &.push {
+              width: 97%;
+              border-top: none;
+              margin-top: 0;
+              margin-left: 2%;
+            }
+            &.selected {
+              background-color: #5a6066;
+            }
+          }
+        }
+        button {
+          font-family: $font-regular;
+          font-size: 16px;
+          border-radius: 5px;
+          background-color: $button-header-background;
+          color: black;
+          margin: 6px;
+          border: 10px;
+          width: 46%;
+          height: 20px;
+          box-shadow: 3px 3px 3px black;
+          &:hover {
+            background-color: $button-hover;
           }
         }
       }
@@ -121,6 +202,42 @@
           &.selected {
             box-shadow: none;
             cursor: auto;
+          }
+        }
+      }
+      .check-list {
+        height: 258px;
+        .check-items {
+          height: 243px;
+          overflow: scroll;
+          .check-item {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-family: $font-regular;
+            font-size: 16px;
+            &.odds {
+              background-color: $background-light;
+            }
+            .name {
+              margin-left: 5px;
+            }
+            .price {
+              float: right;
+              margin-right: 5px;
+            }
+          }
+        }
+        .total-cost {
+          margin-top: 8px;
+          .label {
+            font-family: $font-regular;
+            font-size: 16px;
+          }
+          .cost {
+            font-family: $font-regular;
+            font-size: 18px;
+            float: right;
+            margin-right: 5px;
           }
         }
       }

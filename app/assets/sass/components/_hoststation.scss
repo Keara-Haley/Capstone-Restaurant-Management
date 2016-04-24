@@ -1,0 +1,180 @@
+@import '../vars';
+
+.host-station {
+  .tables-container {
+    border-radius: 5px;
+    float: left;
+    width: 69%;
+    background-color: $background-medium;
+    margin-right: 1%;
+    height: 650px;
+    .reservation-buttons {
+      margin-bottom: 5px;
+      position: relative;
+      .modal {
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 600px; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        //background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      .take-reservation-button, .remove-reservation-button, .seat-reservation-button {
+        margin: 5px 0 5px 50px;
+        display: inline-block;
+        button {
+          font-family: $font-regular;
+          font-size: 16px;
+          border-radius: 5px;
+          background-color: $button-header-background;
+          color: black;
+          border: 10px;
+          width: 200px;
+          height: 50px;
+          box-shadow: 3px 3px 3px black;
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+    }
+    .tables {
+      background-color: $dark-grey;
+      height: 510px;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      position: relative;
+      .table {
+        cursor: pointer;
+        position: absolute;
+        &.mini {
+          height: 48px;
+          width: 75px;
+          background: url(./../images/miniTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/miniTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.short {
+          height: 47px;
+          width: 75px;
+          background: url(./../images/shortTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/shortTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.long {
+          height: 70px;
+          width: 75px;
+          background: url(./../images/longTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/longTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.occupied {
+          opacity: .2;
+        }
+        &.rotate {
+          -webkit-transform: rotate(90deg);
+        }
+
+      }
+    }
+    .waitlist-buttons {
+      margin: 5px;
+      .add-waitlist-button, .remove-waitlist-button, .seat-waitlist-button {
+        margin: 5px 0px 5px 50px;
+        display: inline-block;
+        button {
+          font-family: $font-regular;
+          font-size: 16px;
+          border-radius: 5px;
+          background-color: $button-header-background;
+          color: black;
+          border: 10px;
+          width: 200px;
+          height: 50px;
+          box-shadow: 3px 3px 3px black;
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+    }
+  }
+  .lists-container {
+    border-radius: 5px;
+    float: left;
+    width: 29%;
+    background-color: $dark-grey;
+    margin-left: 1%;
+    margin-bottom: 15px;
+    .reservation-list {
+      h1 {
+        background-color: $button-header-background;
+        margin: 0;
+        font-family: $font-regular;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 2px black;
+      }
+      height: 317px;
+      background-color: $background-medium;
+      margin: 5px;
+      .reservation {
+        font-family: $font-regular;
+        width: 96.5%;
+        margin: 5px;
+        background-color: $button-header-background;
+        text-indent: 5px;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 5px;
+        cursor: pointer;
+        &.selected {
+          box-shadow: none;
+        }
+        &:hover {
+          background-color: $button-hover;
+        }
+      }
+    }
+    .waitlist-list {
+      h1 {
+        background-color: $button-header-background;
+        margin: 0;
+        font-family: $font-regular;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 2px black;
+      }
+      height: 317px;
+      background-color: $background-medium;
+      margin: 5px;
+      .waitlist {
+        font-family: $font-regular;
+        width: 96.5%;
+        margin: 5px;
+        background-color: $button-header-background;
+        text-indent: 5px;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 5px;
+        cursor: pointer;
+        &.selected {
+          box-shadow: none;
+        }
+        &:hover {
+          background-color: $button-hover;
+        }
+      }
+    }
+  }
+}

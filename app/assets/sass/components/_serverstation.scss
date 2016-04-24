@@ -1,0 +1,246 @@
+@import '../vars';
+
+.server-station {
+  display: flex;
+  .tables-container {
+    border-radius: 5px;
+    float: left;
+    width: 70%;
+    background-color: $background-medium;
+    margin-right: 1%;
+    margin-top: 70px;
+    height: 510px;
+    .tables {
+      border-radius: 5px;
+      background-color: $dark-grey;
+      height: 510px;
+      //border: 4px solid $background-medium;
+      position: relative;
+      .table {
+        cursor: pointer;
+        position: absolute;
+        &.mini {
+          height: 48px;
+          width: 75px;
+          background: url(./../images/miniTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/miniTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.short {
+          height: 47px;
+          width: 75px;
+          background: url(./../images/shortTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/shortTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.long {
+          height: 70px;
+          width: 75px;
+          background: url(./../images/longTableBlank.png) no-repeat;
+          background-size: contain;
+          &.selected {
+            background: url(./../images/longTableBlankSelected.png) no-repeat;
+            background-size: contain;
+          }
+        }
+        &.occupied {
+          opacity: .2;
+        }
+        &.rotate {
+          -webkit-transform: rotate(90deg);
+        }
+
+      }
+    }
+  }
+  .menu-check {
+    width: 29%;
+    height: 650px;
+    margin-left: 1%;
+    border-radius: 5px;
+    float: left;
+    background-color: $dark-grey;
+    margin-bottom: 15px;
+    .menu-container {
+      height: 317px;
+      background-color: $background-medium;
+      margin: 5px;
+      .menu-buttons {
+        display: flex;
+        .menu-button {
+          width: 50%;
+          background-color: $button-header-background;
+          border-bottom: 2px solid $dark-grey;
+          text-align: center;
+          height: 35px;
+          font-family: $font-regular;
+          font-size: 25px;
+          cursor: pointer;
+          &.drinks {
+            border-right: 1px solid $dark-grey;
+          }
+          &.food {
+            border-left: 1px solid $dark-grey;
+          }
+          &.selected {
+            background-color: $button-hover;
+            cursor: auto;
+          }
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+      .menu-list {
+        height: 258px;
+        //overflow: scroll;
+        .category-tabs {
+          display: flex;
+          .tab {
+            background-color: $button-header-background;
+            border-bottom: 2px solid $dark-grey;
+            text-align: center ;
+            height: 20px;
+            font-family: $font-regular;
+            cursor: pointer;
+            border-left: 1px solid $dark-grey;
+            &.drink {
+              width: calc(100% / 4);
+              font-size: 14px;
+            }
+            &.food {
+              width: calc(100% / 6);
+              font-size: 13px;
+            }
+            &.selected {
+              background-color: $button-hover;
+              cursor: auto;
+            }
+            &:hover {
+              background-color: $button-hover;
+            }
+            &.non-alc {
+              border-left: none;
+            }
+          }
+        }
+        .menu-items {
+          height: 228px;
+          overflow: scroll;
+          .menu-item {
+            width: 98%;
+            margin-top: 5px;
+            margin-left: 1%;
+            margin-bottom: 5px;
+            //border-radius: 5px;
+            border: 2px solid $dark-grey;
+            background-color: $background-dark;
+            span {
+              font-family: $font-regular;
+              font-size: 16px;
+              margin-left: 5px;
+            }
+            &.no-margin {
+              margin-bottom: 0;
+            }
+            &.push {
+              width: 97%;
+              border-top: none;
+              margin-top: 0;
+              margin-left: 2%;
+            }
+            &.selected {
+              background-color: #5a6066;
+            }
+          }
+        }
+        button {
+          font-family: $font-regular;
+          font-size: 16px;
+          border-radius: 5px;
+          background-color: $button-header-background;
+          color: black;
+          margin: 6px;
+          border: 10px;
+          width: 46%;
+          height: 20px;
+          box-shadow: 3px 3px 3px black;
+          &:hover {
+            background-color: $button-hover;
+          }
+        }
+      }
+    }
+    .check-container {
+      height: 317px;
+      background-color: $background-medium;
+      margin: 5px;
+      .check-buttons {
+        display: flex;
+        .check-button {
+          width: 50%;
+          background-color: $button-header-background;
+          border-bottom: 2px solid $dark-grey;
+          text-align: center;
+          height: 35px;
+          font-family: $font-regular;
+          font-size: 25px;
+          box-shadow: 0 1px 1px black;
+          cursor: pointer;
+          &.check {
+            border-right: 1px solid $dark-grey;
+          }
+          &.payment {
+            border-left: 1px solid $dark-grey;
+          }
+          &.selected {
+            box-shadow: none;
+            cursor: auto;
+          }
+        }
+      }
+      .check-list {
+        height: 258px;
+        .check-items {
+          height: 243px;
+          overflow: scroll;
+          .check-item {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-family: $font-regular;
+            font-size: 16px;
+            &.odds {
+              background-color: $background-light;
+            }
+            .name {
+              margin-left: 5px;
+            }
+            .price {
+              float: right;
+              margin-right: 5px;
+            }
+          }
+        }
+        .total-cost {
+          margin-top: 8px;
+          .label {
+            font-family: $font-regular;
+            font-size: 16px;
+          }
+          .cost {
+            font-family: $font-regular;
+            font-size: 18px;
+            float: right;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
 module.exports = {
     menuItems: {
         foodCategories: [
-            "appetizers",
-            "burgers",
-            "famous pub grub",
-            "soups and salads",
-            "sandwiches",
+            "apps",
+            "burgs",
+            "grub",
+            "s&s",
+            "sand",
             "pizza"
         ],
         food: {
@@ -15,7 +15,7 @@ module.exports = {
                 price: 6.95,
                 description: "basket of fries, house-made curry sauce",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             2: {
                 itemID: 2,
@@ -23,7 +23,8 @@ module.exports = {
                 price: 7.95,
                 description: "traditional or boneless, tossed in: roughstock bbq, asian, dry rub, honey mustard or buffalo",
                 glutenFree: false,
-                category: "appetizers"
+                options: {flavors: ["roughstock bbq", "asian", "dry rub", "honey mustard", "buffalo"]},
+                category: "apps"
             },
             3: {
                 itemID: 3,
@@ -31,7 +32,8 @@ module.exports = {
                 price: 13.95,
                 description: "traditional or boneless, tossed in: roughstock bbq, asian, dry rub, honey mustard or buffalo",
                 glutenFree: false,
-                category: "appetizers"
+                options: {flavors: ["roughstock bbq", "asian", "dry rub", "honey mustard", "buffalo"]},
+                category: "apps"
             },
             4: {
                 itemID: 4,
@@ -39,7 +41,7 @@ module.exports = {
                 price: 8.95,
                 description: "flash fried sweet panko-coated squid with lime cilantro & sriracha remoulade",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             5: {
                 itemID: 5,
@@ -47,7 +49,7 @@ module.exports = {
                 price: 8.95,
                 description: "eggplant, zucchini, bell pepper, tomatoes, mozzarella, char bread",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             6: {
                 itemID: 6,
@@ -55,7 +57,7 @@ module.exports = {
                 price: 13.95,
                 description: "three daily cheeses, cured meats, fresh fruit, two soft pretzels, house mustard",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             7: {
                 itemID: 7,
@@ -63,7 +65,8 @@ module.exports = {
                 price: 1.95,
                 description: "three irish cheeses, breaded, fried, house marinara, slice apples",
                 glutenFree: false,
-                category: "appetizers"
+                options: {quantity: "customer input"},
+                category: "apps"
             },
             8: {
                 itemID: 8,
@@ -71,7 +74,7 @@ module.exports = {
                 price: 6.95,
                 description: "raw seasonal vegetables, herbed sour cream dip",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             9: {
                 itemID: 9,
@@ -79,7 +82,7 @@ module.exports = {
                 price: 3.95,
                 description: "blanched almonds, roasted in olive oil & sea salt",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             10: {
                 itemID: 10,
@@ -87,7 +90,7 @@ module.exports = {
                 price: 8.95,
                 description: "baked half french loaf, garlic butter, diced tomato, fresh basil, four cheeses",
                 glutenFree: false,
-                category: "appetizers"
+                category: "apps"
             },
             11: {
                 itemID: 11,
@@ -95,7 +98,7 @@ module.exports = {
                 price: 12.95,
                 description: "house dry rub spice, arugula, bacon, bleu cheese, ciabatta",
                 glutenFree: false,
-                category: "burgers"
+                category: "burgs"
             },
             12: {
                 itemID: 12,
@@ -103,7 +106,7 @@ module.exports = {
                 price: 11.95,
                 description: "avocado, artichoke hearts, spinach, goat cheese, potato bun",
                 glutenFree: false,
-                category: "burgers"
+                category: "burgs"
             },
             13: {
                 itemID: 13,
@@ -111,7 +114,7 @@ module.exports = {
                 price: 11.95,
                 description: "jalapeno, bacon, avocado, pepper jack cheese, house chipotle aioli, potato bun",
                 glutenFree: false,
-                category: "burgers"
+                category: "burgs"
             },
             14: {
                 itemID: 14,
@@ -119,7 +122,7 @@ module.exports = {
                 price: 11.95,
                 description: "house-made roughstock bbq sauce, cheddar cheese, bacon, carmelized onion, potato bun",
                 glutenFree: false,
-                category: "burgers"
+                category: "burgs"
             },
             15: {
                 itemID: 15,
@@ -127,7 +130,7 @@ module.exports = {
                 price: 16.95,
                 description: "two half pound patties, american cheese, bacon, potato bun",
                 glutenFree: false,
-                category: "burgers"
+                category: "burgs"
             },
             16: {
                 itemID: 16,
@@ -135,7 +138,7 @@ module.exports = {
                 price: 12.95,
                 description: "beer battered cod, fries, coleslaw, house remoulade",
                 glutenFree: false,
-                category: "famous pub grub"
+                category: "grub"
             },
             17: {
                 itemID: 17,
@@ -143,7 +146,7 @@ module.exports = {
                 price: 10.95,
                 description: "local ground beef, corn, green beans, carrots, celery, onion, cheddar mashed potatoes",
                 glutenFree: true,
-                category: "famous pub grub"
+                category: "grub"
             },
             18: {
                 itemID: 18,
@@ -151,15 +154,16 @@ module.exports = {
                 price: 12.95,
                 description: "buttermilk fried chicken served hot or chilled, potato salad, coleslaw",
                 glutenFree: false,
-                category: "famous pub grub"
+                category: "grub"
             },
             19: {
                 itemID: 19,
                 name: "Fish Taco",
                 price: 10.95,
-                description: "beer battered cod, coleslaw, cheddar, chili oil, remoulade, char bread, choice of side substitue blackened chicken",
+                description: "beer battered cod, coleslaw, cheddar, chili oil, remoulade, char bread, choice of side substitute blackened chicken",
                 glutenFree: false,
-                category: "famous pub grub"
+                options: {choiceOfSide: "customer input", substitutions: "customer input"},
+                category: "grub"
             },
             20: {
                 itemID: 20,
@@ -167,7 +171,7 @@ module.exports = {
                 price: 4,
                 description: "daily soup special",
                 glutenFree: false,
-                category: "soups and salads"
+                category: "s&s"
             },
             21: {
                 itemID: 21,
@@ -175,7 +179,7 @@ module.exports = {
                 price: 6,
                 description: "daily soup special",
                 glutenFree: false,
-                category: "soups and salads"
+                category: "s&s"
             },
             22: {
                 itemID: 22,
@@ -183,7 +187,7 @@ module.exports = {
                 price: 6.5,
                 description: "french onion soup",
                 glutenFree: false,
-                category: "soups and salads"
+                category: "s&s"
             },
             23: {
                 itemID: 23,
@@ -193,20 +197,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "romaine lettuce, shaved parmesan, croutons, traditional dressing",
                 glutenFree: false,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             24: {
                 itemID: 24,
@@ -216,20 +222,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "spring mix, cucumber, red onion, tomato, croutons, choice of dressing on side",
                 glutenFree: false,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             25: {
                 itemID: 25,
@@ -239,20 +247,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "slice mozzarella, tomato, fried capers, fresh basil, mixed greens, olive oil, balsamic reduction",
                 glutenFree: true,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             26: {
                 itemID: 26,
@@ -262,20 +272,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "romaine lettuce, turkey, bacon, egg, bleu cheese crumbles, avocado, red onion, tomato, croutons, choice of dressing on the side",
                 glutenFree: false,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             27: {
                 itemID: 27,
@@ -285,20 +297,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "mixed greens, artichoke hearts, tomato, red onion, black olives, chevre, house-made herb vinaigrette",
                 glutenFree: true,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             28: {
                 itemID: 28,
@@ -308,20 +322,22 @@ module.exports = {
                 proteinPrice: 4,
                 description: "baby spinach leaves, red onion, mandarin oranges, mushrooms, pancetta, choice of dressing on the side",
                 glutenFree: false,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                proteinOptions: [
-                    "Chicken",
-                    "Falafel",
-                    "Shredded Pork",
-                    "Calamari"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    proteinOptions: [
+                        "Chicken",
+                        "Falafel",
+                        "Shredded Pork",
+                        "Calamari"
+                    ]
+                },
+                category: "s&s"
             },
             29: {
                 itemID: 29,
@@ -329,18 +345,20 @@ module.exports = {
                 price: 8.5,
                 description: "Served Daily 11am-3pm A Bowl of Your Choice of Daily Soup With a Side House Salad or Caesar",
                 glutenFree: false,
-                dressingOptions: [
-                    "Herb Vinaigrette",
-                    "Honey Mustard Vinaigrette",
-                    "Ranch",
-                    "Bleu Cheese",
-                    "1000 Island"
-                ],
-                saladOptions: [
-                    "House",
-                    "Caesar"
-                ],
-                category: "soups and salads"
+                options: {
+                    dressingOptions: [
+                        "Herb Vinaigrette",
+                        "Honey Mustard Vinaigrette",
+                        "Ranch",
+                        "Bleu Cheese",
+                        "1000 Island"
+                    ],
+                    saladOptions: [
+                        "House",
+                        "Caesar"
+                    ]
+                },
+                category: "s&s"
             },
             30: {
                 itemID: 30,
@@ -348,7 +366,7 @@ module.exports = {
                 price: 12.95,
                 description: "house roasted herbed turkey breast, smoked ham, grilled pineapple, cheddar, coleslaw, chipotle aioli, grilled sourdough",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             31: {
                 itemID: 31,
@@ -356,7 +374,7 @@ module.exports = {
                 price: 11.95,
                 description: "house roasted herbed turkey breast, swiss, lettuce, tomato, red onion, avocado, bacon, Hellman's mayo, strawberry jalapeno jam, sourdough",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             32: {
                 itemID: 32,
@@ -364,7 +382,7 @@ module.exports = {
                 price: 12.95,
                 description: "corned beef, melted swiss, sauerkraut, 1000 island dressing, marble rye",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             33: {
                 itemID: 33,
@@ -372,7 +390,7 @@ module.exports = {
                 price: 9.95,
                 description: "house made black bean, quinoa & artichoke heart veggie patty, lettuce, tomato, onion, pickle, potato bun",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             34: {
                 itemID: 34,
@@ -380,7 +398,7 @@ module.exports = {
                 price: 10.95,
                 description: "melted dubliner, parmesan, swiss, aged white cheddar, tomato, smoked ham, fresh basil, garlic, toasted sourdough",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             35: {
                 itemID: 35,
@@ -388,7 +406,7 @@ module.exports = {
                 price: 10.95,
                 description: "three fried garbanzo cakes, cucumber salad, tomato, tahini dressing, char bread",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             36: {
                 itemID: 36,
@@ -396,7 +414,7 @@ module.exports = {
                 price: 11.95,
                 description: "grilled chicken breast, fresh mozzarella, spinach, tomato, roasted tomato aioli, ciabatta",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             37: {
                 itemID: 37,
@@ -404,7 +422,7 @@ module.exports = {
                 price: 11.95,
                 description: "tuna & bay shrimp salad, swiss, lettuce, tomato, red onion, grilled marble rye",
                 glutenFree: false,
-                category: "sandwiches"
+                category: "sand"
             },
             38: {
                 itemID: 38,
@@ -445,16 +463,18 @@ module.exports = {
                 toppingPrice: 1,
                 description: "build your own pizza",
                 glutenFree: false,
-                toppingOptions: [
-                    "pepporoni",
-                    "sausage",
-                    "olives"
-                ],
+                options: {
+                    toppingOptions: [
+                        "pepporoni",
+                        "sausage",
+                        "olives"
+                    ]
+                },
                 category: "pizza"
             }
         },
         drinksCategories: [
-            "non-alcoholic",
+            "non-alc",
             "beer",
             "wine",
             "cocktails"
@@ -464,19 +484,19 @@ module.exports = {
                 itemID: 43,
                 name: "Pepsi",
                 price: 2.25,
-                category: "non-alcoholic"
+                category: "non-alc"
             },
             44: {
                 itemID: 44,
                 name: "Mountain Dew",
                 price: 2.25,
-                category: "non-alcoholic"
+                category: "non-alc"
             },
             45: {
                 itemID: 45,
                 name: "7Up",
                 price: 2.25,
-                category: "non-alcoholic"
+                category: "non-alc"
             },
             46: {
                 itemID: 46,
@@ -488,7 +508,7 @@ module.exports = {
                     "peanut butter",
                     "strawberry"
                 ],
-                category: "non-alcoholic"
+                category: "non-alc"
             },
             47: {
                 itemID: 47,

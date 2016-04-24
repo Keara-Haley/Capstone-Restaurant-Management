@@ -4,42 +4,30 @@ define(function() {
     var React = require('react');
 
     var MenuButtonsContainer = React.createClass({
-        getInitialState: function() {
-            return {
-                selectedButton: 'drinks'
-            };
+        propTypes: {
+            selectedButton: React.PropTypes.string.isRequired,
+            selectDrinksButton: React.PropTypes.func.isRequired,
+            selectFoodButton: React.PropTypes.func.isRequired
         },
-
+        
         getDrinksButton: function() {
             var classname = "menu-button drinks";
-            if(this.state.selectedButton === 'drinks') {
+            if(this.props.selectedButton === 'drinks') {
                 classname += " selected";
             }
             return (
-                <div className={classname} onClick={this.selectDrinksButton}>DRINKS</div>
+                <div className={classname} onClick={this.props.selectDrinksButton}>DRINKS</div>
             );
-        },
-
-        selectDrinksButton: function() {
-            this.setState({
-                selectedButton: 'drinks'
-            });
         },
 
         getFoodButton: function() {
             var classname = "menu-button food";
-            if(this.state.selectedButton === 'food') {
+            if(this.props.selectedButton === 'food') {
                 classname += " selected";
             }
             return (
-                <div className={classname} onClick={this.selectFoodButton}>FOOD</div>
+                <div className={classname} onClick={this.props.selectFoodButton}>FOOD</div>
             );
-        },
-
-        selectFoodButton: function() {
-            this.setState({
-                selectedButton: 'food'
-            });
         },
 
         render: function() {

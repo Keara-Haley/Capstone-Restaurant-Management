@@ -2,7 +2,7 @@ module.exports = {
     waitlistData: {
         1: {
             waitlistId: 1,
-            name: "John Smith",
+            name: "Burke Norwood",
             dateTime: 1455901200,
             numberInParty: 4,
             phoneNumber: "(111)111-1111",
@@ -14,7 +14,7 @@ module.exports = {
         },
         2: {
             waitlistId: 2,
-            name: "Jane Doe",
+            name: "Daryl Becke",
             dateTime: 1455903000,
             numberInParty: 2,
             phoneNumber: "(123)456-7891",
@@ -26,7 +26,7 @@ module.exports = {
         },
         3: {
             waitlistId: 3,
-            name: "Barry White",
+            name: "Rahul Johansen",
             dateTime: 1455906600,
             numberInParty: 3,
             phoneNumber: "(222)222-2222",
@@ -38,7 +38,7 @@ module.exports = {
         },
         4: {
             waitlistId: 4,
-            name: "James Dean",
+            name: "Sawyer Alves",
             dateTime: 1455904800,
             numberInParty: 6,
             phoneNumber: "(999)999-9999",

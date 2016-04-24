@@ -1,0 +1,167 @@
+@import '../vars';
+
+.kitchen-station {
+  .orders-list-container {
+    border-radius: 5px;
+    float: left;
+    width: 79%;
+    background-color: $dark-grey;
+    margin-right: 1%;
+    height: 650px;
+    .orders-list {
+      h1 {
+        background-color: $button-header-background;
+        margin: 0;
+        font-family: $font-regular;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 6px $dark-grey;
+      }
+      height: 640px;
+      background-color: $background-medium;
+      margin: 5px;
+      .order-columns {
+        display: flex;
+        .order-column-1 {
+          overflow: scroll;
+          width: 50%;
+          height: 607px;
+          border-right: solid 3px $dark-grey;
+          .order {
+            width: calc(100% - 10px);
+            height: auto;
+            background-color: $background-light;
+            margin: 5px 5px 0 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 1px 1px 1px black;
+            h1 {
+              width: 20px;
+              height: 20px;
+              font-size: 20px;
+              margin: 3px;
+              background-color: $button-header-background;
+              border: none;
+            }
+            .order-text {
+              width: 70%;
+              height: calc(100% - 10px);
+              margin: 5px 0;
+              background-color: $background-dark;
+              border: 2px solid $dark-grey;
+              span {
+                font-weight: bold;
+                display: block;
+                margin: 3px;
+              }
+            }
+            .order-up {
+              margin-right: 10px;
+              button {
+                font-family: $font-regular;
+                font-size: 11px;
+                border-radius: 5px;
+                background-color: $button-header-background;
+                color: black;
+                border: 10px;
+                width: 70px;
+                height: 20px;
+                box-shadow: 3px 3px 3px black;
+                &:hover {
+                  background-color: $button-hover;
+                }
+              }
+            }
+          }
+        }
+        .order-column-2 {
+          overflow: scroll;
+          width: 50%;
+          height: 607px;
+          border-left: solid 3px $dark-grey;
+          .order {
+            width: calc(100% - 10px);
+            height: auto;
+            background-color: $background-light;
+            margin: 5px 5px 0 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 1px 1px 1px black;
+            h1 {
+              width: 20px;
+              height: 20px;
+              font-size: 20px;
+              margin-left: 5px;
+              background-color: $button-header-background;
+              border: none;
+            }
+            .order-text {
+              width: 70%;
+              height: calc(100% - 10px);
+              margin: 5px 0;
+              background-color: $background-dark;
+              border: 2px solid $dark-grey;
+              span {
+                font-weight: bold;
+                display: block;
+                margin: 3px;
+              }
+            }
+            .order-up {
+              margin-right: 10px;
+              button {
+                font-family: $font-regular;
+                font-size: 11px;
+                border-radius: 5px;
+                background-color: $button-header-background;
+                color: black;
+                border: 10px;
+                width: 70px;
+                height: 20px;
+                box-shadow: 3px 3px 3px black;
+                &:hover {
+                  background-color: $button-hover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .tables-sat-container {
+    border-radius: 5px;
+    float: left;
+    width: 19%;
+    background-color: $dark-grey;
+    margin-left: 1%;
+    margin-bottom: 15px;
+    height: 650px;
+    .tables-sat-list {
+      h1 {
+        background-color: $button-header-background;
+        margin: 0;
+        font-family: $font-regular;
+        font-size: 25px;
+        text-align: center;
+        border-bottom: solid 6px $dark-grey;
+      }
+      height: 640px;
+      background-color: $background-medium;
+      margin: 5px;
+      .table-sat {
+        font-family: $font-regular;
+        width: 96.5%;
+        margin: 5px;
+        background-color: $button-header-background;
+        text-indent: 5px;
+        //box-shadow: 2px 2px 2px black;
+        border-radius: 5px;
+        border: 2px solid $dark-grey;
+        //cursor: pointer;
+      }
+    }
+  }
+}

@@ -67,6 +67,7 @@ define(function() {
         },
 
         render: function () {
+            //TODO figure out how to only display the ones for the current day and then sort by time
             return (
                 <div className="reservation-list">
                     <h1 className="reservations-header">RESERVATIONS</h1>

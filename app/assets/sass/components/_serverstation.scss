@@ -224,6 +224,11 @@
             .price {
               float: right;
               margin-right: 5px;
+              i {
+                font-size: 14px;
+                margin-left: 5px;
+                cursor: pointer;
+              }
             }
           }
         }
@@ -238,6 +243,38 @@
             font-size: 18px;
             float: right;
             margin-right: 5px;
+          }
+        }
+        .payment {
+          .cash-button {
+            font-family: $font-regular;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: $button-header-background;
+            color: black;
+            margin: 6px;
+            border: 10px;
+            width: 40%;
+            height: 40px;
+            box-shadow: 3px 3px 3px black;
+            &:hover {
+              background-color: $button-hover;
+            }
+          }
+          .credit-button {
+            font-family: $font-regular;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: $button-header-background;
+            color: black;
+            margin: 6px;
+            border: 10px;
+            width: 40%;
+            height: 40px;
+            box-shadow: 3px 3px 3px black;
+            &:hover {
+              background-color: $button-hover;
+            }
           }
         }
       }

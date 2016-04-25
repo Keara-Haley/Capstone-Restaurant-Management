@@ -7,7 +7,7 @@ define(function() {
     var MenuItems = require('./../../utils/definitions/MenuItemDefinitions');
     var _ = require('lodash');
 
-    var exampleCheck = OrderData.orderData[4].seats;
+    var exampleCheck = OrderData.orderData[4];
     var drinkItems = MenuItems.menuItems.drinks;
     var foodItems = MenuItems.menuItems.food;
 
@@ -16,33 +16,38 @@ define(function() {
             selectedButton: React.PropTypes.string.isRequired
         },
 
+        removeItem: function(itemID) {
+            //TODO figure out how to do the store for order data
+            //TODO figure out how to remove the items from said store
+            console.log(itemID);
+        },
+
         getCheckItemsMarkup: function() {
             if(this.props.selectedButton === 'check') {
                 var markup = [], drink, food, counter = 0;
+                var self = this;
 
-                _.map(exampleCheck, function (seat) {
-                    _.map(seat.drinks, function (drinkID) {
-                        drink = drinkItems[drinkID];
-                        markup.push(
-                            <div key={"drink " + drinkID} className={"check-item" + ((counter % 2) ? " odds" : "")}>
-                                <span key={"drink name" + drinkID} className="name">{drink.name}</span>
-                                <span key={"drink price" + drinkID} className="price">{drink.price.toFixed(2)}</span>
-                            </div>
-                        );
-                        counter++;
-                    });
-                    _.map(seat.food, function (foodItem) {
-                        var foodItemID = foodItem.menuItem;
-                        food = foodItems[foodItemID];
-                        markup.push(
-                            <div key={"food " + foodItemID}
-                                 className={"check-item" + ((counter % 2 === 1) ? " odds" : "")}>
-                                <span key={"food name" + foodItemID} className="name">{food.name}</span>
-                                <span key={"food price" + foodItemID} className="price">{food.price.toFixed(2)}</span>
-                            </div>
-                        );
-                        counter++;
-                    });
+                _.map(exampleCheck.drinks, function (drinkID) {
+                    drink = drinkItems[drinkID];
+                    markup.push(
+                        <div key={"drink " + drinkID} className={"check-item" + ((counter % 2) ? " odds" : "")}>
+                            <span className="name">{drink.name}</span>
+                            <span className="price">{drink.price.toFixed(2)}<i className="fa fa-times-circle" onClick={self.removeItem.bind(self, drinkID)}/></span>
+                        </div>
+                    );
+                    counter++;
+                });
+                _.map(exampleCheck.food, function (foodItem) {
+                    var foodItemID = foodItem.menuItem;
+                    food = foodItems[foodItemID];
+                    markup.push(
+                        <div key={"food " + foodItemID}
+                             className={"check-item" + ((counter % 2 === 1) ? " odds" : "")}>
+                            <span className="name">{food.name}</span>
+                            <span className="price">{food.price.toFixed(2)}<i className="fa fa-times-circle" onClick={self.removeItem.bind(self, foodItemID)}/></span>
+                        </div>
+                    );
+                    counter++;
                 });
                 return markup;
             }
@@ -52,16 +57,14 @@ define(function() {
         getTotalCost: function() {
             if(this.props.selectedButton === 'check') {
                 var totalCost = 0, drink, food, foodItemID;
-                _.map(exampleCheck, function (seat) {
-                    _.map(seat.drinks, function (drinkID) {
-                        drink = drinkItems[drinkID];
-                        totalCost += parseFloat(drink.price);
-                    });
-                    _.map(seat.food, function (foodItem) {
-                        foodItemID = foodItem.menuItem;
-                        food = foodItems[foodItemID];
-                        totalCost += parseFloat(food.price);
-                    });
+                _.map(exampleCheck.drinks, function (drinkID) {
+                    drink = drinkItems[drinkID];
+                    totalCost += parseFloat(drink.price);
+                });
+                _.map(exampleCheck.food, function (foodItem) {
+                    foodItemID = foodItem.menuItem;
+                    food = foodItems[foodItemID];
+                    totalCost += parseFloat(food.price);
                 });
                 totalCost = totalCost.toFixed(2);
 
@@ -75,6 +78,18 @@ define(function() {
             return null;
         },
 
+        getPaymentMarkup: function() {
+            if(this.props.selectedButton == 'payment') {
+                return (
+                    <div className="payment-buttons">
+                        <button className="cash-button">CASH</button>
+                        <button className="credit-button">CREDIT</button>
+                    </div>
+                );
+            }
+            return null;
+        },
+
         render: function() {
             return (
                 <div className="check-list">
@@ -82,6 +97,9 @@ define(function() {
                         {this.getCheckItemsMarkup()}
                     </div>
                     {this.getTotalCost()}
+                    <div className="payment">
+                        {this.getPaymentMarkup()}
+                    </div>
                 </div>
             );
         }

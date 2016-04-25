@@ -66,6 +66,7 @@ define(function() {
         },
 
         render: function () {
+            //TODO figure out how to display in order by time
             return (
                 <div className="waitlist-list">
                     <h1 className="waitlist-header">WAITLISTS</h1>

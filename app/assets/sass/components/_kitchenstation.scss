@@ -29,25 +29,17 @@
           border-right: solid 3px $dark-grey;
           .order {
             width: calc(100% - 10px);
+            min-height: 65px;
             height: auto;
             background-color: $background-light;
             margin: 5px 5px 0 5px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             box-shadow: 1px 1px 1px black;
-            h1 {
-              width: 20px;
-              height: 20px;
-              font-size: 20px;
-              margin: 3px;
-              background-color: $button-header-background;
-              border: none;
-            }
             .order-text {
               width: 70%;
               height: calc(100% - 10px);
-              margin: 5px 0;
+              margin: 5px 0 5px 5px;
               background-color: $background-dark;
               border: 2px solid $dark-grey;
               span {
@@ -56,8 +48,22 @@
                 margin: 3px;
               }
             }
+            .order-number {
+              width: 100px;
+              height: 20px;
+              margin-left: 13px;
+              background-color: $button-header-background;
+              border: none;
+              span {
+                height: auto;
+                font: $font-regular;
+                margin-left: 2px;
+                font-size: 14px;
+              }
+            }
             .order-up {
-              margin-right: 10px;
+              margin-left: 27px;
+              margin-top: 5px;
               button {
                 font-family: $font-regular;
                 font-size: 11px;
@@ -82,25 +88,17 @@
           border-left: solid 3px $dark-grey;
           .order {
             width: calc(100% - 10px);
+            min-height: 65px;
             height: auto;
             background-color: $background-light;
             margin: 5px 5px 0 5px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             box-shadow: 1px 1px 1px black;
-            h1 {
-              width: 20px;
-              height: 20px;
-              font-size: 20px;
-              margin-left: 5px;
-              background-color: $button-header-background;
-              border: none;
-            }
             .order-text {
               width: 70%;
               height: calc(100% - 10px);
-              margin: 5px 0;
+              margin: 5px 0 5px 5px;
               background-color: $background-dark;
               border: 2px solid $dark-grey;
               span {
@@ -109,8 +107,22 @@
                 margin: 3px;
               }
             }
+            .order-number {
+              width: 100px;
+              height: 20px;
+              margin-left: 13px;
+              background-color: $button-header-background;
+              border: none;
+              span {
+                height: auto;
+                font: $font-regular;
+                margin-left: 2px;
+                font-size: 14px;
+              }
+            }
             .order-up {
-              margin-right: 10px;
+              margin-left: 27px;
+              margin-top: 5px;
               button {
                 font-family: $font-regular;
                 font-size: 11px;

@@ -10,6 +10,11 @@ var OrdersStore = assign({}, EventEmitter.prototype, {
         return this.orderData;    
     },
     
+    removeOrder: function(orderID) {
+        _.unset(this.orderData, orderID);
+        this.emitChange();
+    },
+    
     emitChange: function() {
         this.emit('change');
     },

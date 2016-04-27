@@ -9,7 +9,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         1: {
             tableId: 1,
@@ -20,7 +21,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         2: {
             tableId: 2,
@@ -31,7 +33,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         3: {
             tableId: 3,
@@ -42,7 +45,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         4: {
             tableId: 4,
@@ -53,7 +57,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         5: {
             tableId: 5,
@@ -64,7 +69,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         6: {
             tableId: 6,
@@ -75,7 +81,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         7: {
             tableId: 7,
@@ -86,7 +93,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         8: {
             tableId: 8,
@@ -97,7 +105,8 @@ module.exports = {
             capacity: 6,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         9: {
             tableId: 9,
@@ -108,7 +117,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         10: {
             tableId: 10,
@@ -119,7 +129,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         11: {
             tableId: 11,
@@ -130,7 +141,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         12: {
             tableId: 12,
@@ -141,7 +153,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         13: {
             tableId: 13,
@@ -152,7 +165,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         14: {
             tableId: 14,
@@ -163,7 +177,8 @@ module.exports = {
             capacity: 6,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         15: {
             tableId: 15,
@@ -174,7 +189,8 @@ module.exports = {
             capacity: 4,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         16: {
             tableId: 16,
@@ -185,7 +201,8 @@ module.exports = {
             capacity: 2,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         17: {
             tableId: 17,
@@ -196,7 +213,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         18: {
             tableId: 18,
@@ -207,7 +225,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         19: {
             tableId: 19,
@@ -218,7 +237,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         20: {
             tableId: 20,
@@ -229,7 +249,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         21: {
             tableId: 21,
@@ -240,7 +261,8 @@ module.exports = {
             capacity: 2,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         22: {
             tableId: 22,
@@ -251,7 +273,8 @@ module.exports = {
             capacity: 4,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         23: {
             tableId: 23,
@@ -262,7 +285,8 @@ module.exports = {
             capacity: 4,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         24: {
             tableId: 24,
@@ -273,7 +297,8 @@ module.exports = {
             capacity: 6,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         25: {
             tableId: 25,
@@ -284,7 +309,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         26: {
             tableId: 26,
@@ -295,7 +321,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         27: {
             tableId: 27,
@@ -306,7 +333,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         28: {
             tableId: 28,
@@ -317,7 +345,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         29: {
             tableId: 29,
@@ -328,7 +357,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         30: {
             tableId: 30,
@@ -339,7 +369,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         31: {
             tableId: 31,
@@ -350,7 +381,8 @@ module.exports = {
             capacity: 6,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         32: {
             tableId: 32,
@@ -361,7 +393,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         33: {
             tableId: 33,
@@ -372,7 +405,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         34: {
             tableId: 34,
@@ -383,7 +417,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         35: {
             tableId: 35,
@@ -394,7 +429,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         36: {
             tableId: 36,
@@ -405,7 +441,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         37: {
             tableId: 37,
@@ -416,7 +453,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         38: {
             tableId: 38,
@@ -427,7 +465,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         39: {
             tableId: 39,
@@ -438,7 +477,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         40: {
             tableId: 40,
@@ -449,7 +489,8 @@ module.exports = {
             capacity: 6,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         41: {
             tableId: 41,
@@ -460,7 +501,8 @@ module.exports = {
             capacity: 2,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         42: {
             tableId: 42,
@@ -471,7 +513,8 @@ module.exports = {
             capacity: 2,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         43: {
             tableId: 43,
@@ -482,7 +525,8 @@ module.exports = {
             capacity: 4,
             rotate: true,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         44: {
             tableId: 44,
@@ -493,7 +537,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         45: {
             tableId: 45,
@@ -504,7 +549,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         46: {
             tableId: 46,
@@ -515,7 +561,8 @@ module.exports = {
             capacity: 6,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         47: {
             tableId: 47,
@@ -526,7 +573,8 @@ module.exports = {
             capacity: 4,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         },
         48: {
             tableId: 48,
@@ -537,7 +585,8 @@ module.exports = {
             capacity: 2,
             rotate: false,
             selected: false,
-            party: null
+            party: null,
+            orderID: null
         }
     }
 };

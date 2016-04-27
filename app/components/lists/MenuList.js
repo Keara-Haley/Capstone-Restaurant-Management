@@ -5,6 +5,9 @@ define(function() {
     var MenuItemDefinition = require('./../../utils/definitions/MenuItemDefinitions');
     var _ = require('lodash');
 
+    var TablesStore = require('./../stores/TablesStore');
+    var OrdersStore = require('./../stores/OrdersStore');
+
     var foodCategories = MenuItemDefinition.menuItems.foodCategories;
     var foodItems = MenuItemDefinition.menuItems.food;
     var drinkCategories = MenuItemDefinition.menuItems.drinksCategories;
@@ -19,8 +22,22 @@ define(function() {
             return {
                 selectedDrinkCategory: 'non-alc',
                 selectedFoodCategory: 'apps',
-                selectedMenuItems: []
+                selectedMenuItems: [],
+                tables: null
             };
+        },
+
+        componentWillMount: function() {
+            this.setState({
+                tables: TablesStore.get()
+            });
+            TablesStore.addChangeListener(this.updateTables);
+        },
+
+        updateTables: function() {
+            this.setState({
+                tables: TablesStore.get()
+            });
         },
 
         getCategoryTabs: function() {
@@ -129,6 +146,30 @@ define(function() {
             }
         },
 
+        deselectAllItems: function() {
+            this.setState({
+                selectedMenuItems: []
+            });
+        },
+
+        addToCheck: function() {
+            var selectedTable = _.find(this.state.tables, ['selected', true]);
+            if(selectedTable && this.state.selectedMenuItems) {
+                var drinks = _.filter(this.state.selectedMenuItems, function (item) {
+                    return drinkCategories.indexOf(item.category) !== -1;
+                });
+
+                var food = _.filter(this.state.selectedMenuItems, function (item) {
+                    return foodCategories.indexOf(item.category) !== -1;
+                });
+
+                OrdersStore.setOrder(selectedTable.orderID, food, drinks);
+                this.setState({
+                    selectedMenuItems: []
+                });
+            }
+        },
+
         render: function() {
             return (
                 <div className="menu-list">
@@ -138,8 +179,8 @@ define(function() {
                     <div className="menu-items">
                         {this.getMenuItems()}
                     </div>
-                    <button className="deselect-all">DESELECT ALL</button>
-                    <button className="add-to-check">ADD TO CHECK</button>
+                    <button className="deselect-all" onClick={this.deselectAllItems}>DESELECT ALL</button>
+                    <button className="add-to-check" onClick={this.addToCheck}>ADD TO CHECK</button>
                 </div>
             );
         }

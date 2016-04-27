@@ -8,7 +8,7 @@ var createID = function() {
 };
 
 var WaitlistsStore = assign({}, EventEmitter.prototype, {
-    waitlistData: WaitlistDataDefinition.waitlistData,
+    waitlistData: {},   //WaitlistDataDefinition.waitlistData,
 
     get: function() {
         return this.waitlistData;

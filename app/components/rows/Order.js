@@ -19,12 +19,15 @@ define(function() {
             var orderText = [];
             _.map(this.props.order.food, function(foodItem) {
                 var specInstr = foodItem.specInstr ? " - " + foodItem.specInstr : "";
-                orderText.push(<span>{MenuItemDefinitions.menuItems.food[foodItem.menuItem].name + specInstr}</span>);
+                orderText.push(<span>{foodItem.name + specInstr}</span>);
             });
             return orderText;
         },
 
         render: function() {
+            if(this.props.order.food.length === 0) {
+                return null;
+            }
             return (
                 <div className="order">
                     <div className="order-text">

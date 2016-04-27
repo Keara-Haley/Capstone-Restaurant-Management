@@ -20,7 +20,7 @@ var getDateTime = function(date, time) {
 };
 
 var ReservationsStore = assign({}, EventEmitter.prototype, {
-    reservationData: ReservationDataDefinition.reservationsData,
+    reservationData: {},     //ReservationDataDefinition.reservationsData,
 
     get: function() {
         return this.reservationData;
@@ -35,7 +35,7 @@ var ReservationsStore = assign({}, EventEmitter.prototype, {
         var reservation = {
             reservationId: id,
             name: data[0],
-            dateTime: getDateTime(data[2], data[3]),
+            dateTime: data[2] + " " + data[3],
             numberInParty: data[1],
             phoneNumber: data[4],
             specialInstructions: data[5],

@@ -2,6 +2,7 @@ var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 var tableDataDefinition = require('./../../utils/definitions/tableDataDefinitions');
 var _ = require('lodash');
+require('events').EventEmitter.prototype._maxListeners = 100;
 
 var TablesStore = assign({}, EventEmitter.prototype, {
     tableData: tableDataDefinition.tableData,

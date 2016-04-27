@@ -13,15 +13,41 @@ define(function() {
         },
 
         componentWillMount: function() {
+            var totalReservations = ReservationsStore.get();
+            var reservations = _.filter(totalReservations, function(res) {
+                var dates = _.split(res.dateTime, '/');
+                dates[3] = dates[2].substring(5);
+                dates[2] = dates[2].substring(0, 4);
+
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth() + 1;
+                var todayDay = today.getDate();
+
+                return (todayYear === parseInt(dates[2])) && (todayMonth === parseInt(dates[0])) && (todayDay === parseInt(dates[1]));
+            });
             this.setState({
-                reservations: ReservationsStore.get()
+                reservations: reservations
             });
             ReservationsStore.addChangeListener(this.updateReservations);
         },
 
         updateReservations: function() {
+            var totalReservations = ReservationsStore.get();
+            var reservations = _.filter(totalReservations, function(res) {
+                var dates = _.split(res.dateTime, '/');
+                dates[3] = dates[2].substring(5);
+                dates[2] = dates[2].substring(0, 4);
+
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth() + 1;
+                var todayDay = today.getDate();
+
+                return (todayYear === parseInt(dates[2])) && (todayMonth === parseInt(dates[0])) && (todayDay === parseInt(dates[1]));
+            });
             this.setState({
-                reservations: ReservationsStore.get()
+                reservations: reservations
             });
         },
 
@@ -67,7 +93,6 @@ define(function() {
         },
 
         render: function () {
-            //TODO figure out how to only display the ones for the current day and then sort by time
             return (
                 <div className="reservation-list">
                     <h1 className="reservations-header">RESERVATIONS</h1>

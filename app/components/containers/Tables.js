@@ -3,6 +3,7 @@ define(function() {
     var React = require('react');
     var Table = require('./../buttons/Table');
     var TablesStore = require('./../stores/TablesStore');
+    var OrdersStore = require('./../stores/OrdersStore');
     var _ = require('lodash');
 
     var Tables = React.createClass({
@@ -17,14 +18,18 @@ define(function() {
         },
 
         componentWillMount: function() {
-            //_.forEach(tables, function(table) {
-            //    TablesStore.setTableData(table.tableId, table);
-            //});
             this.setState({
                 tables: TablesStore.get()
             });
-            //this.state.tables = TablesStore.get();
             TablesStore.addChangeListener(this.updateTables);
+        },
+
+        componentWillUnmount: function() {
+            var selectedTable = _.find(this.state.tables, ['selected', true]);
+            if(selectedTable) {
+                selectedTable.selected = false;
+                TablesStore.setTableData(selectedTable.tableId, selectedTable);
+            }
         },
 
         updateTables: function() {
@@ -35,7 +40,7 @@ define(function() {
 
         calculateSeatProb: function() {
             _.forEach(this.state.tables, function(table) {
-
+                
             });
         },
 
@@ -58,7 +63,7 @@ define(function() {
             }
             if(table.occupied) {
                 classname = classname + 'occupied ';
-                clickFunction = this.selectOccupiedTable.bind(this, table);
+                //clickFunction = this.selectOccupiedTable.bind(this, table);
                 title = table.party.name + " " + table.party.numberInParty;
             }
             if(table.rotate) {
@@ -83,6 +88,12 @@ define(function() {
         },
 
         selectTable: function(tableId) {
+            var table = this.state.tables[tableId];
+            if(table.orderID === null) {
+                table.orderID = OrdersStore.create(tableId, table.section);
+                TablesStore.setTableData(tableId, table);
+            }
+
             var alreadySelectedTable = _.find(this.state.tables, ['selected', true]);
             var selectedTable;
             if(alreadySelectedTable) {
@@ -99,10 +110,6 @@ define(function() {
                 selectedTable.selected = true;
                 TablesStore.setTableData(tableId, selectedTable);
             }
-        },
-
-        selectOccupiedTable: function(table) {
-            //TODO add in tiny modal to show who is seated there
         },
 
         render: function () {

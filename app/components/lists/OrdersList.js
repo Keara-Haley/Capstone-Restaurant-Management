@@ -27,6 +27,9 @@ define(function() {
         },
         
         getOrderMarkup: function(order) {
+            if(order.completed){
+                return null;
+            }
             return (
                 <Order key={order.orderID} order={order}/>
             );

@@ -62,7 +62,6 @@ define(function() {
         },
 
         seatReservation: function() {
-            //TODO change so multiple tables can be selected
             if(!this.props.modalOpen) {
                 var selectedTable = _.find(this.state.tables, ['selected', true]);
                 var selectedReservation = _.find(this.state.reservations, ['selected', true]);

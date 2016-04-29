@@ -49,7 +49,6 @@ define(function() {
 
         removeWaitlist: function() {
             if(!this.props.modalOpen) {
-                console.log('here');
                 var selectedWaitlist = _.find(this.state.waitlists, ['selected', true]);
                 if (!selectedWaitlist) {
                     alert("Please select a waitlist entry.");

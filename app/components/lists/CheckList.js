@@ -49,7 +49,6 @@ define(function() {
         removeItem: function(itemID) {
             //TODO figure out how to do the store for order data
             //TODO figure out how to remove the items from said store
-            console.log(itemID);
         },
 
         getCheckItemsMarkup: function() {
@@ -59,7 +58,6 @@ define(function() {
                 var self = this;
 
                 var order = this.state.orders[selectedTable.orderID];
-                console.log(order.drinks);
                 _.map(order.drinks, function (drink) {
                     var drinkID = drink.itemID;
                     //drink = drinkItems[drinkID];

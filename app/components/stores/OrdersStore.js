@@ -36,11 +36,9 @@ var OrdersStore = assign({}, EventEmitter.prototype, {
     },
     
     setOrder: function(orderID, foodData, drinkData) {
-        console.log(drinkData);
         this.orderData[orderID].food = _.concat(this.orderData[orderID].food, foodData);
         this.orderData[orderID].drinks = _.concat(this.orderData[orderID].drinks, drinkData);
         this.emitChange();
-        console.log(this.orderData[orderID]);
     },
     
     emitChange: function() {

@@ -13,41 +13,15 @@ define(function() {
         },
 
         componentWillMount: function() {
-            var totalReservations = ReservationsStore.get();
-            var reservations = _.filter(totalReservations, function(res) {
-                var dates = _.split(res.dateTime, '/');
-                dates[3] = dates[2].substring(5);
-                dates[2] = dates[2].substring(0, 4);
-
-                var today = new Date();
-                var todayYear = today.getFullYear();
-                var todayMonth = today.getMonth() + 1;
-                var todayDay = today.getDate();
-
-                return (todayYear === parseInt(dates[2])) && (todayMonth === parseInt(dates[0])) && (todayDay === parseInt(dates[1]));
-            });
             this.setState({
-                reservations: reservations
+                reservations: ReservationsStore.get()
             });
             ReservationsStore.addChangeListener(this.updateReservations);
         },
 
         updateReservations: function() {
-            var totalReservations = ReservationsStore.get();
-            var reservations = _.filter(totalReservations, function(res) {
-                var dates = _.split(res.dateTime, '/');
-                dates[3] = dates[2].substring(5);
-                dates[2] = dates[2].substring(0, 4);
-
-                var today = new Date();
-                var todayYear = today.getFullYear();
-                var todayMonth = today.getMonth() + 1;
-                var todayDay = today.getDate();
-
-                return (todayYear === parseInt(dates[2])) && (todayMonth === parseInt(dates[0])) && (todayDay === parseInt(dates[1]));
-            });
             this.setState({
-                reservations: reservations
+                reservations: ReservationsStore.get()
             });
         },
 
@@ -87,7 +61,18 @@ define(function() {
             var reservations = [];
             var self = this;
             _.forEach(this.state.reservations, function(reservation) {
-                reservations.push(self.getReservationMarkup(reservation));
+                var dates = _.split(reservation.dateTime, '/');
+                dates[3] = dates[2].substring(5);
+                dates[2] = dates[2].substring(0, 4);
+
+                var today = new Date();
+                var todayYear = today.getFullYear();
+                var todayMonth = today.getMonth() + 1;
+                var todayDay = today.getDate();
+
+                if((todayYear === parseInt(dates[2])) && (todayMonth === parseInt(dates[0])) && (todayDay === parseInt(dates[1]))) {
+                    reservations.push(self.getReservationMarkup(reservation));
+                }
             });
             return reservations;
         },
